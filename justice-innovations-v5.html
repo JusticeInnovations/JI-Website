@@ -45,7 +45,7 @@ nav {
 .logo {display:flex;align-items:center;gap:16px;text-decoration:none;}
 .logo-scales {width:48px;height:48px;flex-shrink:0;}
 .logo-name {font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;color:#FFFFFF;line-height:1;}
-.logo-sub  {font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-lt);margin-top:4px;}
+.logo-sub  {font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--red-lt);margin-top:4px;}
 
 .nav-links {display:flex;align-items:center;gap:0;list-style:none;margin-left:auto;}
 .nav-links > li {position:relative;}
@@ -100,20 +100,135 @@ nav {
 .hero-section {
   position:relative;
   overflow:hidden;
-  background: linear-gradient(160deg, #060E1A 0%, #0A1E38 40%, #061828 70%, #080E20 100%);
+  background: #030810;
+}
+/* Police light orbs */
+.police-lights {
+  position:absolute;inset:0;
+  z-index:0;
+  pointer-events:none;
+  overflow:hidden;
+}
+.pl-blue, .pl-red, .pl-blue2, .pl-red2 {
+  position:absolute;
+  border-radius:50%;
+  opacity:0;
+}
+.pl-blue {
+  width:700px;height:700px;
+  background:radial-gradient(circle, rgba(20,100,255,0.95) 0%, rgba(10,60,200,0.6) 40%, transparent 70%);
+  filter:blur(40px);
+  top:-150px;left:-150px;
+  animation:flashBlue 2.5s ease-in-out infinite;
+}
+.pl-red {
+  width:650px;height:650px;
+  background:radial-gradient(circle, rgba(255,20,40,0.95) 0%, rgba(200,10,30,0.6) 40%, transparent 70%);
+  filter:blur(40px);
+  top:-120px;left:50px;
+  animation:flashRed 2.5s ease-in-out infinite;
+}
+.pl-blue2 {
+  width:600px;height:600px;
+  background:radial-gradient(circle, rgba(20,100,255,0.9) 0%, rgba(10,60,200,0.55) 40%, transparent 70%);
+  filter:blur(45px);
+  bottom:-150px;right:5%;
+  animation:flashBlue 2.5s ease-in-out infinite 1.25s;
+}
+.pl-red2 {
+  width:560px;height:560px;
+  background:radial-gradient(circle, rgba(255,20,40,0.9) 0%, rgba(200,10,30,0.55) 40%, transparent 70%);
+  filter:blur(45px);
+  bottom:-130px;right:calc(5% + 100px);
+  animation:flashRed 2.5s ease-in-out infinite 1.25s;
+}
+/* Wet street reflection strip */
+.pl-ground {
+  position:absolute;
+  bottom:0;left:0;right:0;
+  height:30%;
+  background:linear-gradient(to top, rgba(2,5,10,0.92) 0%, transparent 100%);
+  z-index:1;
+  pointer-events:none;
+}
+.pl-reflect {
+  position:absolute;
+  bottom:0;left:0;right:0;
+  height:18%;
+  z-index:2;
+  pointer-events:none;
+  animation:reflectShimmer 2.5s ease-in-out infinite;
+}
+.pl-reflect::before {
+  content:'';
+  position:absolute;
+  bottom:18px;left:5%;right:5%;
+  height:6px;
+  background:linear-gradient(90deg, transparent 0%, rgba(20,100,255,0.7) 30%, rgba(255,20,40,0.7) 70%, transparent 100%);
+  filter:blur(8px);
+}
+.pl-reflect::after {
+  content:'';
+  position:absolute;
+  bottom:8px;left:10%;right:10%;
+  height:3px;
+  background:linear-gradient(90deg, transparent 0%, rgba(20,100,255,0.5) 30%, rgba(255,20,40,0.5) 70%, transparent 100%);
+  filter:blur(4px);
+}
+/* Streak lines like light bouncing off wet pavement */
+.pl-streak {
+  position:absolute;
+  bottom:12%;left:0;right:0;
+  height:2px;
+  background:linear-gradient(90deg, transparent 0%, rgba(20,100,255,0.25) 20%, rgba(255,20,40,0.25) 80%, transparent 100%);
+  filter:blur(2px);
+  z-index:2;
+  pointer-events:none;
+  animation:streakFlash 2.5s ease-in-out infinite;
+}
+@keyframes flashBlue {
+  0%   { opacity:0.9; transform:scale(1); }
+  24%  { opacity:0.9; }
+  25%  { opacity:0.05; transform:scale(1.04); }
+  49%  { opacity:0.05; }
+  50%  { opacity:0.85; transform:scale(0.97); }
+  74%  { opacity:0.85; }
+  75%  { opacity:0.05; transform:scale(1.03); }
+  99%  { opacity:0.05; }
+  100% { opacity:0.9; transform:scale(1); }
+}
+@keyframes flashRed {
+  0%   { opacity:0.05; transform:scale(1); }
+  24%  { opacity:0.05; }
+  25%  { opacity:0.9; transform:scale(1.04); }
+  49%  { opacity:0.9; }
+  50%  { opacity:0.05; transform:scale(0.97); }
+  74%  { opacity:0.05; }
+  75%  { opacity:0.88; transform:scale(1.03); }
+  99%  { opacity:0.88; }
+  100% { opacity:0.05; transform:scale(1); }
+}
+@keyframes reflectShimmer {
+  0%,100% { opacity:0.6; filter:hue-rotate(0deg); }
+  25%     { opacity:1; filter:hue-rotate(200deg); }
+  50%     { opacity:0.5; }
+  75%     { opacity:1; filter:hue-rotate(0deg); }
+}
+@keyframes streakFlash {
+  0%,100% { opacity:0.4; }
+  25%     { opacity:1; background:linear-gradient(90deg, transparent 0%, rgba(20,100,255,0.6) 40%, rgba(255,20,40,0.1) 60%, transparent 100%); }
+  75%     { opacity:1; background:linear-gradient(90deg, transparent 0%, rgba(255,20,40,0.1) 40%, rgba(255,20,40,0.6) 60%, transparent 100%); }
 }
 .hero-section::before {
   content:'';
   position:absolute;inset:0;
-  background:
-    radial-gradient(ellipse 60% 50% at 75% 40%, rgba(27,111,232,0.18) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 60% at 15% 70%, rgba(0,194,212,0.12) 0%, transparent 65%),
-    radial-gradient(ellipse 30% 40% at 90% 80%, rgba(212,134,10,0.10) 0%, transparent 60%);
+  background:rgba(3,8,16,0.35);
+  z-index:2;
   pointer-events:none;
 }
 .hero {
   position:relative;
-  z-index:1;
+  z-index:3;
   padding:140px 48px 120px;
   max-width:1280px;margin:0 auto;
   display:flex;justify-content:center;
@@ -601,17 +716,17 @@ h1{animation:up .6s .08s ease both;}
 <nav>
   <a href="#top" class="logo">
     <svg class="logo-scales" viewBox="0 0 48 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <rect x="23" y="6" width="2" height="36" fill="var(--teal-lt)" rx="1"/>
-      <circle cx="24" cy="6" r="3" fill="var(--teal-lt)"/>
-      <rect x="6" y="9" width="36" height="2" fill="var(--teal-lt)" rx="1"/>
-      <path d="M16 42h16l2 4H14l2-4z" fill="var(--teal-lt)"/>
-      <rect x="12" y="46" width="24" height="2.5" rx="1.25" fill="var(--teal-lt)"/>
-      <line x1="8" y1="11" x2="8" y2="26" stroke="var(--teal-lt)" stroke-width="1.5"/>
-      <line x1="4" y1="26" x2="12" y2="26" stroke="var(--teal-lt)" stroke-width="1.5"/>
-      <path d="M3 26 Q8 32 13 26" stroke="var(--teal-lt)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-      <line x1="40" y1="11" x2="40" y2="26" stroke="var(--teal-lt)" stroke-width="1.5"/>
-      <line x1="36" y1="26" x2="44" y2="26" stroke="var(--teal-lt)" stroke-width="1.5"/>
-      <path d="M35 26 Q40 32 45 26" stroke="var(--teal-lt)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <rect x="23" y="6" width="2" height="36" fill="#D4AA50" rx="1"/>
+      <circle cx="24" cy="6" r="3" fill="#D4AA50"/>
+      <rect x="6" y="9" width="36" height="2" fill="#D4AA50" rx="1"/>
+      <path d="M16 42h16l2 4H14l2-4z" fill="#D4AA50"/>
+      <rect x="12" y="46" width="24" height="2.5" rx="1.25" fill="#D4AA50"/>
+      <line x1="8" y1="11" x2="8" y2="26" stroke="#D4AA50" stroke-width="1.5"/>
+      <line x1="4" y1="26" x2="12" y2="26" stroke="#D4AA50" stroke-width="1.5"/>
+      <path d="M3 26 Q8 32 13 26" stroke="#D4AA50" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <line x1="40" y1="11" x2="40" y2="26" stroke="#D4AA50" stroke-width="1.5"/>
+      <line x1="36" y1="26" x2="44" y2="26" stroke="#D4AA50" stroke-width="1.5"/>
+      <path d="M35 26 Q40 32 45 26" stroke="#D4AA50" stroke-width="1.5" fill="none" stroke-linecap="round"/>
     </svg>
     <div>
       <div class="logo-name">Justice Innovations</div>
@@ -679,6 +794,15 @@ h1{animation:up .6s .08s ease both;}
 
 <!-- HERO -->
 <section id="top" class="hero-section">
+  <div class="police-lights">
+    <div class="pl-blue"></div>
+    <div class="pl-red"></div>
+    <div class="pl-blue2"></div>
+    <div class="pl-red2"></div>
+    <div class="pl-ground"></div>
+    <div class="pl-reflect"></div>
+    <div class="pl-streak"></div>
+  </div>
   <div class="hero">
     <div class="hero-text">
       <div class="hero-eyebrow">Evidence-Based Justice Technology</div>
