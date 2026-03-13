@@ -1,15 +1,15 @@
-[README (1).md](https://github.com/user-attachments/files/25978809/README.1.md)
+[README (2).md](https://github.com/user-attachments/files/25980021/README.2.md)
 # Justice Innovations — Marketing Website
 
-> **Prosecutor-Guided Intake Technology** | justice.winningit.com
+> **Prosecutor-Guided Intake Technology** | https://justiceinnovations.github.io/JI-Website/
 
 A single-page marketing website for Justice Innovations, presenting the company's AI-powered prosecutor-guided intake and case management platform to District Attorneys, law enforcement agencies, courts, and legislators — primarily in Texas.
 
 ---
 
-## Overview
+## Live Site
 
-This is a static, single-file HTML site (`justice-innovations-v5.html`) designed for GitHub Pages deployment. It includes navigation, product sections, research references, role-based solution pages, and a contact/demo request modal.
+**https://justiceinnovations.github.io/JI-Website/**
 
 ---
 
@@ -17,8 +17,8 @@ This is a static, single-file HTML site (`justice-innovations-v5.html`) designed
 
 ```
 /
-└── justice-innovations-v5.html   # Entire site — HTML, CSS, and JS in one file
-└── README.md                     # This file
+└── index.html     # Entire site — HTML, CSS, and JS in one file
+└── README.md      # This file
 ```
 
 No build tools, frameworks, or dependencies are required. The site is fully self-contained with the exception of Google Fonts (loaded via CDN).
@@ -29,7 +29,7 @@ No build tools, frameworks, or dependencies are required. The site is fully self
 
 | Section | Anchor | Description |
 |---|---|---|
-| Home / Hero | `#top` | Tagline and primary CTA |
+| Home / Hero | `#top` | Tagline and primary CTA with animated police light background |
 | What Is Intake? | `#what-is-intake` | Product overview |
 | How It Works | `#how-it-works` | Process walkthrough |
 | Why a Prosecutor? | `#why-prosecutor` | Methodology rationale |
@@ -47,15 +47,13 @@ No build tools, frameworks, or dependencies are required. The site is fully self
 
 ## Deployment
 
-This site is designed for **GitHub Pages** with zero configuration.
+Hosted on **GitHub Pages** from the `main` branch. Any file committed to `main` goes live automatically within 1-2 minutes.
 
-### Steps
-
-1. Push `justice-innovations-v5.html` (and this README) to the `main` branch of your repository.
-2. In repository **Settings → Pages**, set the source to `main` branch, root `/`.
-3. Rename `justice-innovations-v5.html` to `index.html` **or** configure GitHub Pages to serve the file directly.
-
-> **Recommended:** Rename the file to `index.html` before pushing so the site loads at the root URL without requiring the filename in the path.
+### Updating the Site
+1. Make changes to `index.html`
+2. Upload the updated file to the repo via **Add file → Upload files**
+3. Click **Commit changes**
+4. Wait 1-2 minutes and refresh the live URL
 
 ---
 
@@ -67,13 +65,11 @@ Loaded via Google Fonts CDN — no local assets required:
 - **Outfit** — body / UI
 - **DM Mono** — data / code elements
 
-An internet connection is required to render fonts correctly.
-
 ---
 
 ## Customization
 
-All styles are embedded in the `<style>` block at the top of the file. Key CSS variables control the color palette and can be updated in one place:
+All styles are embedded in the `<style>` block at the top of `index.html`. Key CSS variables control the color palette:
 
 ```css
 :root {
@@ -89,7 +85,7 @@ All styles are embedded in the `<style>` block at the top of the file. Key CSS v
 
 ## Contact & Demo Requests
 
-The site includes a contact/demo request modal triggered by CTA buttons throughout the page. To connect this to a live form backend, update the modal's form action or replace the inline handler with your preferred service (e.g., Formspree, Netlify Forms, or a custom endpoint).
+The site includes a contact/demo request modal triggered by CTA buttons throughout the page. To connect this to a live form backend, update the modal's form action or replace the inline handler with your preferred service.
 
 ---
 
