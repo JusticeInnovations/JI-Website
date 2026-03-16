@@ -1,9 +1,8 @@
-[README (2).md](https://github.com/user-attachments/files/25980021/README.2.md)
 # Justice Innovations — Marketing Website
 
 > **Prosecutor-Guided Intake Technology** | https://justiceinnovations.github.io/JI-Website/
 
-A single-page marketing website for Justice Innovations, presenting the company's AI-powered prosecutor-guided intake and case management platform to District Attorneys, law enforcement agencies, courts, and legislators — primarily in Texas.
+A single-page marketing website for Justice Innovations, presenting the company's prosecutor-guided intake and case management platform to District Attorneys, law enforcement agencies, courts, and legislators — primarily in Texas.
 
 ---
 
@@ -85,7 +84,9 @@ All styles are embedded in the `<style>` block at the top of `index.html`. Key C
 
 ## Contact & Demo Requests
 
-The site includes a contact/demo request modal triggered by CTA buttons throughout the page. To connect this to a live form backend, update the modal's form action or replace the inline handler with your preferred service.
+The site includes a contact/demo request modal triggered by **Talk to Us** and **Request Demo** CTA buttons throughout the page. Form submissions are handled via **Formspree** (endpoint: `https://formspree.io/f/xbdzzwqo`) and delivered by email to `kb@justiceinnovations.us` and `sd@justiceinnovations.us`. No email client is required on the visitor's end.
+
+To update the notification recipients, log in to [formspree.io](https://formspree.io) with the Justice Innovations account.
 
 ---
 
