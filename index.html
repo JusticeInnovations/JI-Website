@@ -708,6 +708,237 @@ h1{animation:up .6s .08s ease both;}
   font-size:14px;color:rgba(255,255,255,.68);line-height:1.8;margin-bottom:12px;
 }
 #legalContent strong {color:rgba(255,255,255,.85);}
+
+/* ── MOBILE DEFAULTS (hidden on desktop) ── */
+.mobile-nav { display: none; }
+.hamburger { display: none; }
+
+/* ── MOBILE RESPONSIVE ── */
+@media (max-width: 768px) {
+
+  /* NAV */
+  nav {
+    padding: 0 16px;
+    height: 60px;
+    flex-wrap: nowrap;
+  }
+  .logo-name { font-size: 22px; }
+  .logo-sub { font-size: 9px; letter-spacing: .1em; }
+  .logo-scales { width: 36px; height: 36px; }
+  .nav-links { display: none; }
+  .nav-badges { display: none; }
+
+  /* HAMBURGER */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 8px;
+    background: none;
+    border: none;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: rgba(255,255,255,.8);
+    border-radius: 2px;
+    transition: all .2s;
+  }
+
+  /* MOBILE NAV DRAWER */
+  .mobile-nav {
+    display: none;
+    position: fixed;
+    top: 60px; left: 0; right: 0;
+    background: #0D1F35;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    padding: 16px;
+    z-index: 99;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+  }
+  .mobile-nav.open { display: block; }
+
+  .mobile-nav a {
+    display: block;
+    padding: 12px 8px;
+    font-size: 15px;
+    color: rgba(255,255,255,.75);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+  }
+  .mobile-nav a:last-child { border-bottom: none; }
+  .mobile-nav .mobile-section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--teal-lt);
+    padding: 16px 8px 4px;
+  }
+  .mobile-nav .mobile-cta {
+    display: block;
+    margin: 16px 0 8px;
+    padding: 12px;
+    background: var(--electric);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: 500;
+    border-bottom: none;
+  }
+
+  /* HERO */
+  .hero-section { padding: 100px 20px 60px; }
+  h1 { font-size: clamp(36px, 10vw, 52px); }
+  .hero-p { font-size: 15px; }
+  .hero-btns { flex-direction: column; align-items: stretch; }
+  .hero-btns .btn { text-align: center; }
+  .trust-strip { gap: 12px; flex-wrap: wrap; justify-content: center; }
+  .trust-item { font-size: 10px; }
+
+  /* SECTIONS */
+  section { padding: 64px 20px !important; }
+  h2 { font-size: clamp(26px, 7vw, 40px) !important; max-width: 100% !important; }
+  .intro-p { font-size: 15px; }
+
+  /* STATS GRID */
+  .stat-grid { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
+  .stat-cell { padding: 24px 16px !important; }
+  .stat-num { font-size: 36px !important; }
+
+  /* TWO-COLUMN LAYOUTS */
+  .why-inner,
+  .how-inner,
+  [style*="display:grid"],
+  [style*="display: grid"] {
+    display: block !important;
+  }
+
+  /* ROLE CARDS / HOW IT WORKS */
+  .role-card { margin-bottom: 16px; }
+
+  /* FEATURE GRID */
+  .feature-grid { grid-template-columns: 1fr !important; }
+
+  /* HIGHLIGHT QUOTE */
+  .highlight-quote { margin: 24px 0 !important; }
+  .hq-text { font-size: 16px !important; }
+
+  /* IMPLEMENTATION */
+  .impl-phases { flex-direction: column !important; }
+  .impl-phase { width: 100% !important; }
+
+  /* CASE STATUS FLOW */
+  [style*="flex:1"] { min-width: 80px !important; }
+
+  /* PAPERS */
+  .papers { grid-template-columns: 1fr !important; }
+
+  /* SOLUTIONS */
+  .solutions-tabs { flex-wrap: wrap; gap: 8px !important; }
+  .sol-tab { font-size: 12px !important; padding: 8px 12px !important; }
+
+  /* CTA */
+  .cta { padding: 64px 20px !important; }
+  .cta-btns { flex-direction: column; align-items: stretch; gap: 12px !important; }
+  .cta-btns .btn { text-align: center; }
+
+  /* FOOTER */
+  .footer-cols { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+
+  /* MODALS */
+  .modal-box { margin: 16px !important; padding: 24px 20px !important; }
+  .modal-row { flex-direction: column !important; }
+  .modal-row > div { width: 100% !important; }
+
+  /* PRODUCT MOCKUP */
+  .product-mockup-wrap { overflow-x: auto; }
+
+  /* INLINE GRIDS / FLEX that need to stack */
+  .impact-grid { grid-template-columns: 1fr !important; }
+  .about-cols { flex-direction: column !important; }
+}
+
+/* ── SMALL PHONES (max 480px) ── */
+@media (max-width: 480px) {
+  .logo-name { font-size: 18px; }
+  .stat-grid { grid-template-columns: 1fr !important; }
+  .footer-cols { grid-template-columns: 1fr !important; }
+  h2 { font-size: clamp(22px, 7vw, 32px) !important; }
+  .hero-section { padding: 90px 16px 48px; }
+  section { padding: 48px 16px !important; }
+  .modal-box { margin: 8px !important; padding: 20px 16px !important; }
+}
+
+/* ── LANDSCAPE PHONES (max 896px, max height 430px) ── */
+@media (max-height: 430px) and (orientation: landscape) {
+  nav { height: 52px; }
+  .mobile-nav { top: 52px; max-height: calc(100vh - 52px); }
+  .hero-section { padding: 72px 24px 40px; min-height: auto; }
+  h1 { font-size: clamp(28px, 6vw, 44px); }
+  .hamburger { display: flex; }
+  .nav-links { display: none; }
+  .nav-badges { display: none; }
+}
+
+/* ── TABLETS PORTRAIT (481px - 768px) ── */
+@media (min-width: 481px) and (max-width: 768px) {
+  nav { padding: 0 24px; }
+  .logo-name { font-size: 24px; }
+  section { padding: 72px 32px !important; }
+  .stat-grid { grid-template-columns: 1fr 1fr !important; }
+  .footer-cols { grid-template-columns: 1fr 1fr !important; }
+  .hero-btns { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+}
+
+/* ── TABLETS LANDSCAPE / IPAD (769px - 1024px) ── */
+@media (min-width: 769px) and (max-width: 1024px) {
+  nav { padding: 0 32px; }
+  .logo-name { font-size: 28px; }
+  .nav-links > li > a { padding: 8px 10px; font-size: 13px; }
+  .nav-demo { padding: 7px 14px; font-size: 12.5px; }
+  section { padding: 80px 32px !important; }
+  .stat-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .feature-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .footer-cols { grid-template-columns: repeat(3, 1fr) !important; }
+  h2 { font-size: clamp(28px, 4vw, 44px) !important; }
+}
+
+/* ── IPAD PRO / LARGE TABLETS (1025px - 1280px) ── */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  nav { padding: 0 40px; }
+  section { padding: 88px 40px !important; }
+  .stat-grid { grid-template-columns: repeat(4, 1fr) !important; }
+  .feature-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .footer-cols { grid-template-columns: repeat(4, 1fr) !important; }
+}
+
+/* ── LARGE DESKTOPS (1600px+) ── */
+@media (min-width: 1600px) {
+  nav { padding: 0 80px; }
+  section { padding: 120px 80px !important; }
+  .logo-name { font-size: 40px; }
+  .logo-sub { font-size: 13px; }
+  .nav-links > li > a { font-size: 15px; padding: 8px 20px; }
+  h1 { font-size: clamp(64px, 5vw, 96px); }
+  h2 { font-size: clamp(40px, 3.5vw, 64px) !important; }
+  .hero-p { font-size: 20px; }
+  .intro-p { font-size: 18px; }
+  .stat-num { font-size: clamp(52px, 4vw, 72px) !important; }
+}
+
+/* ── VERY LARGE DESKTOPS (1920px+) ── */
+@media (min-width: 1920px) {
+  nav { padding: 0 120px; height: 84px; }
+  section { padding: 140px 120px !important; }
+  .hero-section { padding: 160px 120px 100px; }
+  h1 { font-size: clamp(72px, 5.5vw, 110px); }
+}
 </style>
 </head>
 <body>
@@ -733,6 +964,9 @@ h1{animation:up .6s .08s ease both;}
       <div class="logo-sub">Public Benefit Corporation &middot; Texas</div>
     </div>
   </a>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" style="display:none;">
+    <span></span><span></span><span></span>
+  </button>
   <ul class="nav-links">
     <li><a href="#top" style="letter-spacing:.02em;">Home</a></li>
     <li>
@@ -791,6 +1025,26 @@ h1{animation:up .6s .08s ease both;}
     <a href="#" onclick="openLoginModal();return false;" style="font-size:13px;font-weight:500;color:rgba(255,255,255,.7);text-decoration:none;padding:8px 16px;border:1px solid rgba(255,255,255,.2);border-radius:6px;transition:all .2s;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,.5)'" onmouseout="this.style.color='rgba(255,255,255,.7)';this.style.borderColor='rgba(255,255,255,.2)'">Login</a>
   </div>
 </nav>
+
+<!-- MOBILE NAV DRAWER -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-section-label">Product</div>
+  <a href="#what-is-intake" onclick="closeMobileNav()">What Is <em>Intake</em>?</a>
+  <a href="#how-it-works" onclick="closeMobileNav()">How It Works</a>
+  <a href="#why-prosecutor" onclick="closeMobileNav()">Why a Prosecutor?</a>
+  <a href="#features" onclick="closeMobileNav()">Features &amp; Platform</a>
+  <a href="#implementation" onclick="closeMobileNav()">Implementation Package</a>
+  <a href="#what-we-measure" onclick="closeMobileNav()">What We Measure</a>
+  <div class="mobile-section-label">Research</div>
+  <a href="#research" onclick="closeMobileNav()">The Harris County Model</a>
+  <a href="#research-data" onclick="closeMobileNav()">The Cost of Doing Nothing</a>
+  <a href="#research-papers" onclick="closeMobileNav()">Published Papers</a>
+  <div class="mobile-section-label">Solutions</div>
+  <a href="#solutions" onclick="closeMobileNav()">By Role</a>
+  <a href="#about" onclick="closeMobileNav()">About Us</a>
+  <a href="#" class="mobile-cta" onclick="openContactModal('Talk to Us');closeMobileNav();return false;">Talk to Us</a>
+  <a href="#" onclick="openLoginModal();closeMobileNav();return false;" style="display:block;padding:12px 8px;font-size:15px;color:rgba(255,255,255,.75);text-decoration:none;text-align:center;">Login</a>
+</div>
 
 <!-- HERO -->
 <section id="top" class="hero-section">
@@ -2009,13 +2263,38 @@ function closeLoginModal() {
   document.body.style.overflow = '';
 }
 document.addEventListener('DOMContentLoaded', function() {
+  // Login modal click-outside
   var loginModal = document.getElementById('loginModal');
   if (loginModal) {
     loginModal.addEventListener('click', function(e) {
       if (e.target === this) closeLoginModal();
     });
   }
+
+  // Hamburger menu
+  var hamburger = document.getElementById('hamburgerBtn');
+  var mobileNav = document.getElementById('mobileNav');
+
+  function isMobile() { return window.innerWidth <= 768; }
+
+  function updateHamburger() {
+    if (hamburger) hamburger.style.display = isMobile() ? 'flex' : 'none';
+  }
+
+  updateHamburger();
+  window.addEventListener('resize', updateHamburger);
+
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', function() {
+      mobileNav.classList.toggle('open');
+    });
+  }
 });
+
+function closeMobileNav() {
+  var mobileNav = document.getElementById('mobileNav');
+  if (mobileNav) mobileNav.classList.remove('open');
+}
 </script>
 
 <!-- Login Coming Soon Modal -->
