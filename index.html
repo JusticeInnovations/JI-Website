@@ -846,9 +846,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
 /* benefit list */
 .benefit-list { list-style: none; margin-top: 20px; }
 .benefit-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
+  display: block;
   padding: 11px 0;
   border-bottom: 1px solid rgba(255,255,255,.06);
   font-size: 14px;
@@ -1107,6 +1105,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
   .trust-item  { font-size: 13px; width: 100%; }
 
   .platform-desc { text-align: center; margin-left: 0; }
+  .pilot-h2 { font-size: clamp(20px, 5.5vw, 30px) !important; }
 
   /* all multi-col grids collapse to single column */
   .g2, .g3, .g4,
@@ -2091,7 +2090,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
 <section id="about-pilot" class="section section--light">
 <div class="inner">
   <div class="sec-label">Active Pilot</div>
-  <h2 style="max-width:560px;margin-bottom:40px;">Cameron County, Texas<br>April through July 2026.</h2>
+  <h2 class="pilot-h2" style="max-width:480px;margin-bottom:40px;">Cameron County, Texas<br>April through July 2026.</h2>
   <div class="g2 g2--64 g2--center au">
     <div>
       <p class="intro-p">The Cameron County pilot is <em>Intake</em>&#39;s first deployment &mdash; and it is structured to be definitive. We are not running a proof-of-concept that produces anecdotes. We are running a rigorously designed evaluation with historical baselines, statistical testing plans, and metrics designed for grant oversight and peer review.</p>
