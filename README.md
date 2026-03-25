@@ -1,5 +1,12 @@
 # Justice Innovations — Marketing Website
 
+[![CI](https://github.com/JusticeInnovations/JI-Website/actions/workflows/ci.yaml/badge.svg)](https://github.com/JusticeInnovations/JI-Website/actions/workflows/ci.yaml)
+[![Tests](https://img.shields.io/badge/tests-88%20passing-brightgreen)](https://github.com/JusticeInnovations/JI-Website/actions/workflows/ci.yaml)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![WCAG 2.1 AA](https://img.shields.io/badge/accessibility-WCAG%202.1%20AA-blue)](https://www.w3.org/WAI/WCAG21/quickref/)
+[![GitHub Pages](https://img.shields.io/badge/hosted-GitHub%20Pages-222?logo=github)](https://justiceinnovations.github.io/JI-Website/)
+
 > **Prosecutor-Guided Intake Technology** | https://justiceinnovations.github.io/JI-Website/
 
 A single-page marketing website for Justice Innovations, presenting the company's prosecutor-guided intake and case management platform to District Attorneys, law enforcement agencies, courts, and legislators — primarily in Texas.
