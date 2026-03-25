@@ -23,11 +23,24 @@ A single-page marketing website for Justice Innovations, presenting the company'
 
 ```
 /
-└── index.html     # Entire site — HTML, CSS, and JS in one file
-└── README.md      # This file
+├── index.html                        # Entire site — HTML, CSS, and JS in one file
+├── social-preview.svg                # 1200×630 Open Graph image for social sharing
+├── requirements-test.txt             # Python test dependencies
+├── pyproject.toml                    # pytest, black, and ruff configuration
+├── README.md                         # This file
+├── .github/
+│   └── workflows/
+│       └── ci.yaml                   # GitHub Actions CI pipeline
+└── tests/
+    ├── conftest.py                   # pytest fixtures (soup, raw_html)
+    ├── test_html_structure.py        # 18 tests — DOCTYPE, meta, headings, structure
+    ├── test_accessibility.py         # 24 tests — WCAG, ARIA, focus, modals
+    ├── test_content.py               # 32 tests — copy, statistics, sections
+    ├── test_mobile.py                # 8 tests — viewport, breakpoints, touch targets
+    └── test_security.py              # 6 tests — noopener, HTTPS, no credentials
 ```
 
-No build tools, frameworks, or dependencies are required. The site is fully self-contained with the exception of Google Fonts (loaded via CDN).
+No build tools, frameworks, or runtime dependencies are required. The site is fully self-contained with the exception of Google Fonts (loaded via CDN).
 
 ---
 
@@ -36,30 +49,81 @@ No build tools, frameworks, or dependencies are required. The site is fully self
 | Section | Anchor | Description |
 |---|---|---|
 | Home / Hero | `#top` | Tagline and primary CTA with animated police light background |
-| What Is Intake? | `#what-is-intake` | Product overview |
-| How It Works | `#how-it-works` | Process walkthrough |
+| What Is Intake? | `#what-is-intake` | Product overview, officer quote, $4.6M stat |
 | Why a Prosecutor? | `#why-prosecutor` | Methodology rationale |
-| Features & Platform | `#features` | Feature grid |
-| Implementation Package | `#implementation` | Deployment details |
+| How It Works | `#how-it-works` | 4-step process walkthrough |
+| Features & Platform | `#features` | Feature card grid |
+| Implementation Package | `#implementation` | 3-phase deployment timeline |
 | What We Measure | `#what-we-measure` | Metrics & outcomes |
 | Research | `#research` | Harris County Model, evidence base |
+| Cost of Doing Nothing | `#research-data` | Statistical cost analysis |
 | Published Papers | `#research-papers` | Academic citations |
-| White Papers | `#white-paper` | Methodology documents |
-| Solutions by Role | `#solutions` | DA, Law Enforcement, Courts, Legislators |
-| About | `#about` | Company info |
-| Request a Demo | `#cta` | Contact form / modal |
+| White Paper | `#white-paper` | Security & compliance documentation |
+| Solutions by Role | `#solutions` | Overview for all audiences |
+| — District Attorneys | `#solutions-da` | DA / Prosecutor role view |
+| — Law Enforcement | `#solutions-le` | Law enforcement role view |
+| — Courts & Judges | `#solutions-courts` | Courts role view |
+| — Legislators & Policy | `#solutions-policy` | Policy role view |
+| About | `#about` | Company mission and overview |
+| SciLaw Partnership | `#about-scilaw` | Research partner details |
+| Cameron County Pilot | `#about-pilot` | Live pilot program |
+| Request a Demo | `#cta` | Final CTA |
 
 ---
 
 ## Deployment
 
-Hosted on **GitHub Pages** from the `main` branch. Any file committed to `main` goes live automatically within 1-2 minutes.
+Hosted on **GitHub Pages** from the `main` branch. Any commit to `main` goes live automatically within 1–2 minutes.
 
 ### Updating the Site
-1. Make changes to `index.html`
-2. Upload the updated file to the repo via **Add file → Upload files**
-3. Click **Commit changes**
-4. Wait 1-2 minutes and refresh the live URL
+
+```bash
+# Make changes to index.html, then:
+git add index.html
+git commit -m "Description of change"
+git push origin main
+```
+
+The CI pipeline runs automatically on push. If all checks pass, the site deploys. If any test fails, the push is flagged in the Actions tab.
+
+---
+
+## Testing
+
+Tests require Python 3.11+ and the packages in `requirements-test.txt`.
+
+```bash
+# Install dependencies
+pip install -r requirements-test.txt
+
+# Run all 88 tests
+pytest tests/ -v
+
+# Run a specific file
+pytest tests/test_accessibility.py -v
+```
+
+### Test files
+
+| File | Tests | What it checks |
+|---|---|---|
+| `test_html_structure.py` | 18 | DOCTYPE, charset, viewport, title, meta, OG tags, headings, landmarks |
+| `test_accessibility.py` | 24 | Skip link, ARIA roles, focus trap, hamburger ARIA, form labels, SVG aria-hidden, focus-visible CSS, reduced motion |
+| `test_content.py` | 32 | Copy accuracy, key statistics, required section IDs, navigation structure |
+| `test_mobile.py` | 8 | Viewport meta, media query breakpoints, grid collapse, touch targets |
+| `test_security.py` | 6 | External link safety, no javascript: hrefs, HTTPS form endpoint, no credentials in HTML |
+
+---
+
+## CI/CD
+
+GitHub Actions runs on every push to `main` and every pull request:
+
+1. **Black** — format check (`black --check tests/`)
+2. **Ruff** — lint (`ruff check tests/`)
+3. **pytest** — full test suite (`pytest tests/ -v --tb=short`)
+
+See `.github/workflows/ci.yaml` for the full pipeline definition.
 
 ---
 
@@ -67,23 +131,31 @@ Hosted on **GitHub Pages** from the `main` branch. Any file committed to `main` 
 
 Loaded via Google Fonts CDN — no local assets required:
 
-- **Cormorant Garamond** — headings / display
-- **Outfit** — body / UI
-- **DM Mono** — data / code elements
+- **Cormorant Garamond** — headings, display text, statistics
+- **Outfit** — body text, navigation, buttons, forms
+- **DM Mono** — section labels, monospace tags, mockup UI
 
 ---
 
 ## Customization
 
-All styles are embedded in the `<style>` block at the top of `index.html`. Key CSS variables control the color palette:
+All styles are embedded in the `<style>` block at the top of `index.html`. Key CSS custom properties control the color palette and layout:
 
 ```css
 :root {
-  --navy:        #0D1F35;
-  --electric:    #1B6FE8;
-  --electric-lt: #4D9BFF;
-  --gold:        #D4AA50;
-  /* ... */
+  /* Colors */
+  --blue:        #0D1F35;   /* Primary navy */
+  --electric:    #1B6FE8;   /* Brand blue */
+  --electric-lt: #3D8EFF;   /* Light blue */
+  --teal-lt:     #00C2D4;   /* Teal accent */
+  --gold:        #D4860A;   /* Gold accent */
+  --red-lt:      #FF6B6B;   /* Coral red — section labels */
+
+  /* Layout */
+  --px: 48px;    /* Horizontal padding */
+  --py: 96px;    /* Vertical padding */
+  --mw: 1280px;  /* Max content width */
+  --nh: 116px;   /* Nav height */
 }
 ```
 
@@ -91,9 +163,9 @@ All styles are embedded in the `<style>` block at the top of `index.html`. Key C
 
 ## Contact & Demo Requests
 
-The site includes a contact/demo request modal triggered by **Talk to Us** and **Request Demo** CTA buttons throughout the page. Form submissions are handled via **Formspree** (endpoint: `https://formspree.io/f/xbdzzwqo`) and delivered by email to `kb@justiceinnovations.us` and `sd@justiceinnovations.us`. No email client is required on the visitor's end.
+The site includes a contact/demo request modal triggered by **Talk to Us** and **Request Demo** buttons throughout the page. Submissions POST to **Formspree** (`https://formspree.io/f/xbdzzwqo`) and are delivered by email to `kb@justiceinnovations.us` and `sd@justiceinnovations.us`. No server or email client is required on the visitor's end.
 
-To update the notification recipients, log in to [formspree.io](https://formspree.io) with the Justice Innovations account.
+To update notification recipients, log in to [formspree.io](https://formspree.io) with the Justice Innovations account.
 
 ---
 
