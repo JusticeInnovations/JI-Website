@@ -37,7 +37,7 @@
   --px:   48px;
   --py:   96px;
   --mw:   1280px;
-  --nh:   72px;
+  --nh:   116px;
   --r:    10px;
 }
 
@@ -84,8 +84,8 @@ h2 {
 
 .sec-label {
   font-family: 'DM Mono', monospace;
-  font-size: 12px;
-  letter-spacing: .18em;
+  font-size: 14px;
+  letter-spacing: .16em;
   text-transform: uppercase;
   color: var(--red-lt);
   margin-bottom: 12px;
@@ -231,21 +231,21 @@ h2 {
   text-decoration: none;
   flex-shrink: 0;
 }
-.nav__logo-icon { width: 48px; height: 48px; flex-shrink: 0; }
+.nav__logo-icon { width: 96px; height: 96px; flex-shrink: 0; }
 .nav__logo-name {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 36px;
+  font-size: 72px;
   font-weight: 600;
   color: #fff;
   line-height: 1;
 }
 .nav__logo-sub {
   font-family: 'DM Mono', monospace;
-  font-size: 12px;
-  letter-spacing: .18em;
+  font-size: 18px;
+  letter-spacing: .15em;
   text-transform: uppercase;
   color: var(--red-lt);
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 .nav__links {
@@ -570,8 +570,8 @@ h2 {
 }
 .hero-eyebrow {
   font-family: 'DM Mono', monospace;
-  font-size: 12px;
-  letter-spacing: .18em;
+  font-size: 14px;
+  letter-spacing: .16em;
   text-transform: uppercase;
   color: var(--red-lt);
   margin-bottom: 22px;
@@ -794,7 +794,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
   height: 3px;
   background: linear-gradient(90deg, var(--electric), var(--teal-lt));
 }
-.rc-label { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: .15em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.rc-label { font-family: 'DM Mono', monospace; font-size: 14px; letter-spacing: .13em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
 .rc-title { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 500; color: #fff; margin-bottom: 14px; }
 .rc-body  { font-size: 14px; color: rgba(255,255,255,.55); line-height: 1.7; margin-bottom: 20px; }
 .rc-steps { list-style: none; }
@@ -821,7 +821,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
 }
 .sol-card:hover { background: rgba(27,111,232,.08); }
 .sol-card__icon  { font-size: 22px; margin-bottom: 14px; }
-.sol-card__label { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: .13em; text-transform: uppercase; color: var(--electric-lt); margin-bottom: 8px; }
+.sol-card__label { font-family: 'DM Mono', monospace; font-size: 14px; letter-spacing: .11em; text-transform: uppercase; color: var(--electric-lt); margin-bottom: 8px; }
 .sol-card__title { font-size: 15px; font-weight: 500; color: #fff; line-height: 1.4; margin-bottom: 10px; }
 .sol-card__body  { font-size: 12px; color: rgba(255,255,255,.4); }
 
@@ -1113,14 +1113,14 @@ h1            { animation: fadeUp .6s .08s ease both; }
   :root {
     --px: 20px;
     --py: 64px;
-    --nh: 60px;
+    --nh: 80px;
   }
 
   /* nav */
   .nav { padding: 0 16px; gap: 0; }
-  .nav__logo-name { font-size: 22px; }
-  .nav__logo-sub  { font-size: 9px; letter-spacing: .1em; }
-  .nav__logo-icon { width: 36px; height: 36px; }
+  .nav__logo-name { font-size: 38px; }
+  .nav__logo-sub  { font-size: 11px; letter-spacing: .1em; }
+  .nav__logo-icon { width: 54px; height: 54px; }
   .nav__links  { display: none; }
   .nav__actions{ display: none; }
   .nav__burger { display: flex; }
@@ -1208,10 +1208,10 @@ h1            { animation: fadeUp .6s .08s ease both; }
 
 /* ── TABLETS 768–1023px ── */
 @media (min-width: 768px) and (max-width: 1023px) {
-  :root { --px: 32px; --py: 80px; --nh: 68px; }
+  :root { --px: 32px; --py: 80px; --nh: 100px; }
 
   .nav { padding: 0 32px; }
-  .nav__logo-name { font-size: 28px; }
+  .nav__logo-name { font-size: 52px; }
   .nav__links > li > a { padding: 8px 10px; font-size: 13px; }
   .nav__cta  { padding: 7px 14px; font-size: 12.5px; }
 
@@ -1232,7 +1232,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
 /* ── DESKTOP 1024px+ ── */
 @media (min-width: 1024px) {
   /* all multi-col layouts fully active — already defined above */
-  .nav__logo-name { font-size: 36px; }
+  .nav__logo-name { font-size: 72px; }
 }
 
 /* ── LARGE MONITORS 1600px+ ── */
@@ -1245,7 +1245,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
 
 /* ── EXTRA LARGE 1920px+ ── */
 @media (min-width: 1920px) {
-  :root { --px: 120px; --py: 140px; --nh: 84px; }
+  :root { --px: 120px; --py: 140px; --nh: 140px; }
   .nav { padding: 0 120px; }
 }
 
