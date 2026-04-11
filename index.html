@@ -1433,7 +1433,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
   </ul>
   <div class="nav__actions">
     <button class="nav__cta" onclick="openContactModal('Talk to Us')">Talk to Us</button>
-    <button class="nav__login" onclick="openLoginModal()">Login</button>
+    <a href="https://app.justiceinnovations.us" class="nav__login">Login</a>
   </div>
   <button class="nav__burger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
     <span></span><span></span><span></span>
@@ -1457,7 +1457,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
   <a href="#solutions" onclick="closeMnav()">By Role</a>
   <a href="#about" onclick="closeMnav()">About Us</a>
   <button class="mnav__cta" onclick="openContactModal('Talk to Us');closeMnav();">Talk to Us</button>
-  <button class="mnav__login-btn" onclick="openLoginModal();closeMnav();">Login</button>
+  <a href="https://app.justiceinnovations.us" class="mnav__login-btn" onclick="closeMnav();">Login</a>
 </div>
 
 <!-- ════════ HERO ════════ -->
@@ -2363,19 +2363,6 @@ h1            { animation: fadeUp .6s .08s ease both; }
   </div>
 </div>
 
-<!-- Login Modal -->
-<div class="modal-overlay" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginModalTitle">
-  <div class="modal-box" style="max-width:460px;text-align:center;">
-    <button class="modal-close" onclick="closeLoginModal()" aria-label="Close">&times;</button>
-    <div style="margin-bottom:24px;">
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" style="margin:0 auto;display:block;" aria-hidden="true"><circle cx="24" cy="24" r="20" stroke="#1B6FE8" stroke-width="2" fill="none"/><path d="M16 20a8 8 0 1116 0c0 4-2 6-4 8s-4 2-4 6" stroke="#1B6FE8" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="40" r="1.5" fill="#1B6FE8"/></svg>
-    </div>
-    <div id="loginModalTitle" style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:#fff;margin-bottom:12px;">Login Portal Coming Soon</div>
-    <p style="font-size:14px;color:rgba(255,255,255,.80);line-height:1.7;margin-bottom:28px;">The <em>Intake</em> platform login portal is currently under development.</p>
-    <button onclick="closeLoginModal()" style="font-size:13px;padding:10px 28px;cursor:pointer;background:transparent;color:rgba(255,255,255,.8);border:1.5px solid rgba(255,255,255,.2);border-radius:6px;font-family:'Outfit',sans-serif;">Close</button>
-  </div>
-</div>
-
 <!-- ════════ JAVASCRIPT ════════ -->
 <script>
 const legalDocs = {
@@ -2548,25 +2535,8 @@ document.getElementById('contactModal').addEventListener('click', function(e) {
   if (e.target === this) closeContactModal();
 });
 
-function openLoginModal() {
-  _lastFocus = document.activeElement;
-  const modal = document.getElementById('loginModal');
-  modal.classList.add('open');
-  document.body.style.overflow = 'hidden';
-  trapFocus(modal);
-}
-function closeLoginModal() {
-  const modal = document.getElementById('loginModal');
-  modal.classList.remove('open');
-  document.body.style.overflow = '';
-  releaseFocus(modal);
-}
-document.getElementById('loginModal').addEventListener('click', function(e) {
-  if (e.target === this) closeLoginModal();
-});
-
 document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') { closeContactModal(); closeLegalModal(); closeLoginModal(); }
+  if (e.key === 'Escape') { closeContactModal(); closeLegalModal(); }
 });
 
 async function submitContactForm() {

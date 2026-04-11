@@ -104,10 +104,11 @@ def test_nav_cta_is_button(soup: BeautifulSoup) -> None:
     assert cta.name == "button", "nav__cta should be a <button>"
 
 
-def test_nav_login_is_button(soup: BeautifulSoup) -> None:
+def test_nav_login_is_link(soup: BeautifulSoup) -> None:
     login = soup.find(class_="nav__login")
     assert login is not None
-    assert login.name == "button", "nav__login should be a <button>"
+    assert login.name == "a", "nav__login should be an <a> link"
+    assert login.get("href") == "https://app.justiceinnovations.us"
 
 
 # ── Forms ──────────────────────────────────────────────────────────────────────
