@@ -15,6 +15,9 @@ Newest entries at the top. Each entry links to its commit in the repo.
 ### Changed
 - **Hero paragraph rewrite** (Sasha's edit) — reframed the opening paragraph from "stopping bad cases before they start" to "Most cases are reviewed too late. *Intake* fixes that — putting prosecutors in the conversation before arrests, where case quality, costs, and outcomes are actually determined." ([`702ced1`](https://github.com/JusticeInnovations/JI-Website/commit/702ced1))
 
+### Fixed
+- **Company location corrected to San Antonio, TX** — updated 8 references in `index.html` (JSON-LD `foundingLocation`, About paragraph, About citation, footer copyright, and four legal-modal address blocks) from Houston to San Antonio. Preserved two intentional Houston references: the SciLaw partnership description (SciLaw is Houston-based) and the research paper title "Gendered Outcomes in Prostitution Arrests in Houston, Texas." Also updated `SITE-ARCHITECTURE.md` Key People section.
+
 ---
 
 ## 2026-04-10

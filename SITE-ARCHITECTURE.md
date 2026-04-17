@@ -172,7 +172,7 @@ Derived from Formspree notification recipients and git history. If this is incom
 | Research partner | SciLaw (see `#about-scilaw`) |
 | Active pilot | Cameron County DA / Brownsville (see `#about-pilot`) |
 
-Company location: Houston, TX.
+Company location: San Antonio, TX.
 
 ---
 
