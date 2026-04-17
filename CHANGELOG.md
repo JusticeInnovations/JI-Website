@@ -17,6 +17,13 @@ Newest entries at the top. Each entry links to its commit in the repo.
 
 ---
 
+## 2026-04-10
+
+### Changed
+- **Login button now links directly to Back Office app** — replaced the desktop and mobile Login buttons (which opened a "Coming Soon" modal) with direct `<a>` links to `https://app.justiceinnovations.us`. Removed the login modal HTML and all associated JavaScript. Updated accessibility test to assert `<a>` with correct `href`. ([`5c7d97d`](https://github.com/JusticeInnovations/JI-Website/commit/5c7d97d))
+
+---
+
 ## How to add a new entry
 
 1. Add a new dated section at the top, under the most recent `---` divider.
