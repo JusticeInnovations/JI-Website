@@ -73,6 +73,7 @@
   --py:   96px;
   --mw:   1280px;
   --nh:   116px;
+  --ab:   40px;
   --r:    10px;
 }
 
@@ -82,7 +83,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 /* Offset anchor scroll for fixed nav */
-section[id], div[id] { scroll-margin-top: var(--nh); }
+section[id], div[id] { scroll-margin-top: calc(var(--nh) + var(--ab)); }
 body {
   background: var(--blue);
   color: var(--ink);
@@ -477,7 +478,7 @@ h2 {
   position: relative;
   overflow: hidden;
   background: #030810;
-  padding-top: var(--nh);
+  padding-top: calc(var(--nh) + var(--ab));
 }
 .police-lights {
   position: absolute; inset: 0;
@@ -1422,6 +1423,12 @@ h1            { animation: fadeUp .6s .08s ease both; }
     <span></span><span></span><span></span>
   </button>
 </nav>
+
+<!-- ANNOUNCEMENT BAR -->
+<a href="#texas-cohort" style="display:flex;align-items:center;justify-content:center;gap:10px;height:40px;background:rgba(0,194,212,.08);border-bottom:1px solid rgba(0,194,212,.2);font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#00C2D4;text-decoration:none;position:fixed;top:var(--nh);left:0;right:0;z-index:199;transition:background .2s;" onmouseover="this.style.background='rgba(0,194,212,.14)'" onmouseout="this.style.background='rgba(0,194,212,.08)'">
+  &mdash;&nbsp;Active Opportunity&nbsp;&middot;&nbsp;Texas&nbsp;&mdash;
+  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
 
 <!-- MOBILE NAV DRAWER -->
 <div class="mnav" id="mobileNav">
