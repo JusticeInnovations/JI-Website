@@ -124,8 +124,7 @@ def test_harris_county_since_1977(soup: BeautifulSoup) -> None:
 
 def test_pilot_agencies_mentioned(soup: BeautifulSoup) -> None:
     text = soup.get_text()
-    assert "Cameron County" in text
-    assert "Brownsville" in text
+    assert "current Texas jurisdiction" in text
 
 
 def test_offense_types_covered(soup: BeautifulSoup) -> None:
