@@ -142,11 +142,11 @@ def test_contact_form_required_fields_present(soup: BeautifulSoup) -> None:
 
 
 def test_logo_svg_aria_hidden(soup: BeautifulSoup) -> None:
-    logo_svg = soup.find("a", class_="nav__logo")
-    assert logo_svg is not None
-    svg = logo_svg.find("svg")
-    assert svg is not None
-    assert svg.get("aria-hidden") == "true"
+    logo_anchor = soup.find("a", class_="nav__logo")
+    assert logo_anchor is not None
+    img = logo_anchor.find("img")
+    assert img is not None, "Nav logo img not found inside nav__logo anchor"
+    assert img.get("alt"), "Nav logo img missing alt attribute"
 
 
 def test_feature_card_svgs_aria_hidden(soup: BeautifulSoup) -> None:
