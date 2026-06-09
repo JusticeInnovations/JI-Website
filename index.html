@@ -908,6 +908,26 @@ h1            { animation: fadeUp .6s .08s ease both; }
 .tl-phase { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
 .tl-title { font-size: 16px; font-weight: 500; color: #fff; margin-bottom: 8px; }
 .tl-body  { font-size: 14px; color: rgba(255,255,255,.5); line-height: 1.65; }
+/* Implementation Phase Flow */
+.phase-flow { display: flex; align-items: flex-start; }
+.phase-step { flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 16px; }
+.phase-num {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--off); border: 2px solid var(--electric);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'DM Mono', monospace; font-size: 14px; color: var(--electric-lt);
+  margin-bottom: 16px; position: relative; z-index: 1;
+}
+.phase-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.phase-title { font-size: 15px; font-weight: 500; color: #fff; margin-bottom: 10px; }
+.phase-body { font-size: 13px; color: rgba(255,255,255,.5); line-height: 1.65; }
+.phase-connector { flex-shrink: 0; width: 48px; height: 2px; background: linear-gradient(90deg, var(--electric), rgba(27,111,232,.25)); margin-top: 27px; }
+@media (max-width: 768px) {
+  .phase-flow { flex-direction: column; gap: 32px; }
+  .phase-step { text-align: left; align-items: flex-start; flex-direction: row; gap: 20px; padding: 0; }
+  .phase-num { flex-shrink: 0; }
+  .phase-connector { width: 2px; height: 32px; margin-top: 0; margin-left: 27px; background: linear-gradient(180deg, var(--electric), rgba(27,111,232,.25)); }
+}
 
 /* benefit list */
 .benefit-list { list-style: none; margin-top: 20px; }
@@ -2356,32 +2376,30 @@ h1            { animation: fadeUp .6s .08s ease both; }
   <div class="sec-label">Implementation Package</div>
   <h2 style="max-width:620px;margin-bottom:16px;">A complete operational transition.</h2>
   <p style="font-size:16px;color:rgba(255,255,255,.5);max-width:640px;line-height:1.7;margin-bottom:56px;">Platform, training, legal reference materials, and operational infrastructure - delivered as a complete package. Up and running in days, not weeks.</p>
-  <div class="timeline au">
-    <div class="tl-item">
-      <div class="tl-dot">I</div>
-      <div class="tl-content">
-        <div class="tl-phase">Phase I &middot; Foundation</div>
-        <div class="tl-title">Agreements, Access &amp; Setup</div>
-        <div class="tl-body">Agreements and records requests executed. IT contact established with tech portfolio, integration requirements, and preferences documented. Weekly progress reporting cadence set. 24-hour <em>Intake</em> &amp; Screening Facility procedures and logistics documented. 10-year historical baseline analysis period defined for pilot evaluation.</div>
-      </div>
+
+  <div class="phase-flow au">
+    <div class="phase-step">
+      <div class="phase-num">I</div>
+      <div class="phase-label">Phase I - Foundation</div>
+      <div class="phase-title">Agreements, Access &amp; Setup</div>
+      <div class="phase-body">Agreements and records requests executed. IT contact established with tech portfolio, integration requirements, and preferences documented. Weekly progress reporting cadence set. 24-hour <em>Intake</em> &amp; Screening Facility procedures and logistics documented. 10-year historical baseline analysis period defined for pilot evaluation.</div>
     </div>
-    <div class="tl-item">
-      <div class="tl-dot">II</div>
-      <div class="tl-content">
-        <div class="tl-phase">Phase II &middot; Discovery &amp; Customization</div>
-        <div class="tl-title">Forms, Integrations &amp; Training Rollout</div>
-        <div class="tl-body">All jurisdiction-specific forms digitized and configured for auto-population. Data sharing permissions and API integrations finalized. Prosecutor and officer training schedules confirmed. <em>Intake</em> shifts for nights and weekends incorporated. Integration testing begins in the cloud-based environment.</div>
-      </div>
+    <div class="phase-connector" aria-hidden="true"></div>
+    <div class="phase-step">
+      <div class="phase-num">II</div>
+      <div class="phase-label">Phase II - Discovery &amp; Customization</div>
+      <div class="phase-title">Forms, Integrations &amp; Training Rollout</div>
+      <div class="phase-body">All jurisdiction-specific forms digitized and configured for auto-population. Data sharing permissions and API integrations finalized. Prosecutor and officer training schedules confirmed. <em>Intake</em> shifts for nights and weekends incorporated. Integration testing begins in the cloud-based environment.</div>
     </div>
-    <div class="tl-item">
-      <div class="tl-dot">III</div>
-      <div class="tl-content">
-        <div class="tl-phase">Phase III &middot; Pilot &amp; Expansion</div>
-        <div class="tl-title">Live Pilot, Metrics &amp; Scale</div>
-        <div class="tl-body">Feature build tasks mapped with user feedback incorporated. Front end, report automation, and direct filing analytics finalized. Cost/benefit analysis and performance metrics validated. Plans prepared for expansion to additional units and agencies.</div>
-      </div>
+    <div class="phase-connector" aria-hidden="true"></div>
+    <div class="phase-step">
+      <div class="phase-num">III</div>
+      <div class="phase-label">Phase III - Pilot &amp; Expansion</div>
+      <div class="phase-title">Live Pilot, Metrics &amp; Scale</div>
+      <div class="phase-body">Feature build tasks mapped with user feedback incorporated. Front end, report automation, and direct filing analytics finalized. Cost/benefit analysis and performance metrics validated. Plans prepared for expansion to additional units and agencies.</div>
     </div>
   </div>
+
   <div style="margin-top:72px;">
     <div class="sec-label" style="margin-bottom:28px;">What&#39;s Included</div>
     <div class="g2 g2--48 au">
@@ -2392,7 +2410,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
           <li>Model District Attorney Manual section for 24-hr <em>Intake</em> &amp; Screening Division</li>
           <li>Model PD General Orders reflecting new <em>Intake</em> &amp; Screening Procedures</li>
           <li>Prosecutor Training - CLE outline (TCOLE and CLE certified)</li>
-          <li>Police Training - TCOLE outline &middot; 15 total days of instruction</li>
+          <li>Police Training - TCOLE outline - 15 total days of instruction</li>
           <li>Grant writing assistance</li>
           <li>IT support that doesn&#39;t require a translator</li>
         </ul>
@@ -2404,8 +2422,8 @@ h1            { animation: fadeUp .6s .08s ease both; }
           <li>Annotated charges and pleadings database</li>
           <li>Penal Code - relevant sections with annotations</li>
           <li>Code of Criminal Procedure - relevant sections with annotations</li>
-          <li>Search and Seizure case law &middot; Traffic Stop rules and case law</li>
-          <li>Affirmative Links case law &middot; Common Defenses, Justifications, and Exceptions</li>
+          <li>Search and Seizure case law - Traffic Stop rules and case law</li>
+          <li>Affirmative Links case law - Common Defenses, Justifications, and Exceptions</li>
           <li>High Bond and Blood Search Warrant Templates</li>
           <li>Magistrates Order for Emergency Protection templates</li>
         </ul>
