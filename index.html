@@ -928,6 +928,8 @@ h1            { animation: fadeUp .6s .08s ease both; }
   .phase-num { flex-shrink: 0; }
   .phase-connector { width: 2px; height: 32px; margin-top: 0; margin-left: 33px; background: linear-gradient(180deg, var(--electric), rgba(27,111,232,.25)); }
 }
+.inline-link { color: var(--electric-lt); text-underline-offset: 3px; }
+.inline-link:hover { color: #fff; }
 
 /* benefit list */
 .benefit-list { list-style: none; margin-top: 20px; }
@@ -1447,7 +1449,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
 <!-- ANNOUNCEMENT BAR -->
 <a href="#texas-cohort" style="display:flex;align-items:center;justify-content:center;gap:10px;height:40px;background:rgba(0,194,212,.08);border-bottom:1px solid rgba(0,194,212,.2);font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#00C2D4;text-decoration:none;position:fixed;top:var(--nh);left:0;right:0;z-index:199;transition:background .2s;" onmouseover="this.style.background='rgba(0,194,212,.14)'" onmouseout="this.style.background='rgba(0,194,212,.08)'">
   -&nbsp;Active Opportunity&nbsp;&middot;&nbsp;Texas&nbsp;-
-  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" style="color:var(--gold-lt)"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
 </a>
 
 <!-- MOBILE NAV DRAWER -->
@@ -1698,7 +1700,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
         <div style="height:1px;background:rgba(255,255,255,.07);margin:20px 0;"></div>
         <ul class="benefit-list">
           <li>County-level savings calculable by jurisdiction - data and methodology available on request</li>
-          <li>Pilot designed to produce grant-defensible, peer-reviewable results with 10-year baselines</li>
+          <li><a href="#about-pilot" class="inline-link">Pilot</a> designed to produce grant-defensible, peer-reviewable results with 10-year baselines</li>
           <li>Full accountability metrics embedded in the evaluation framework</li>
           <li>Grant writing assistance included in the implementation package</li>
           <li>RFP support available - Justice Innovations works alongside your procurement team</li>
@@ -1713,9 +1715,9 @@ h1            { animation: fadeUp .6s .08s ease both; }
 </div>
       <div class="rc-label">Legislators &amp; Policy</div>
       <h2 style="font-size:clamp(28px,3vw,42px);margin-bottom:22px;">The numbers make the argument.</h2>
-      <p class="intro-p">Pretrial jail populations are expensive, often inequitable, and - in many cases - entirely avoidable. The people sitting in county jails awaiting trial for charges that will eventually be dropped are costing taxpayers money every single night.</p>
+      <p class="intro-p">Pretrial jail populations are expensive, often unjust, and - in many cases - entirely avoidable. The people sitting in county jails awaiting trial for charges that will eventually be dropped are costing taxpayers money every single night.</p>
       <p class="intro-p">The U.S. average rate of No Action cases - arrests and bookings that result in no prosecution - runs between 25% and 45% in jurisdictions without pre-arrest screening. That represents an enormous amount of preventable spending. <em>Intake</em> attacks it at the source.</p>
-      <p class="intro-p">Our current Texas jurisdiction pilot is structured to produce the kind of rigorous, comparative data that moves policy: 10-year historical baselines, statistical validation, and metrics designed specifically for grant credibility and legislative review.</p>
+      <p class="intro-p">Our current Texas jurisdiction <a href="#about-pilot" class="inline-link">pilot</a> is structured to produce the kind of rigorous, comparative data that moves policy: 10-year historical baselines, statistical validation, and metrics designed specifically for grant credibility and legislative review.</p>
     </div>
   </div>
 </div>
@@ -1729,6 +1731,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
   <div class="g2 g2--center au">
     <div>
       <p class="intro-p">Most jurisdictions do not involve a prosecutor in the pre-trial process until after an arrest. Research on the U.S. pretrial system indicates that this process carries a significant cost in wasted resources, wrongful bookings, and charges that do not withstand prosecutorial review.</p>
+      <p class="intro-p">Our current Texas pilot is already proving the model - <a href="#about-pilot" class="inline-link">see it in action</a>.</p>
       <p class="intro-p"><em>Intake</em> changes the sequence by bringing prosecutorial review to the moment of arrest. Before any arrest is made, the responding officer calls a prosecutor hotline. The call averages 90 seconds. The prosecutor reviews the facts of the case inside the <em>Intake</em> platform - seeing only the legal elements, not the race or gender of the person involved - and returns one of four decisions: Accept, Deny, Hold, or Needs More Information.</p>
       <p class="intro-p">If the case is accepted, the arrest proceeds. Charges are sent directly to the court the same day, with a complete audit trail locked at every step. If the case is denied, the officer can release the suspect - before anyone is booked unnecessarily, and before money and time is spent jailing anyone on a charge that will not ultimately be prosecuted.</p>
       <p class="intro-p">Harris County, Texas has operated this model since 1977. They run the most efficient prosecution office and the highest arrest-to-prosecution rate of any of the 25 largest counties in the United States - a result attributed in part to the efficiency of pre-arrest screening. Justice Innovations has built the software to bring that model to jurisdictions across the country.</p>
@@ -1910,7 +1913,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
         <div class="m-row"><span class="m-row-l">Narrative</span><span class="m-row-r">Officer statement uploaded</span><span class="tag t-warn">Review</span></div>
         <div class="m-row"><span class="m-row-l">Prior Offenses</span><span class="m-row-r">1 prior - 2021</span><span class="tag t-flag">Flag</span></div>
         <div class="m-div"></div>
-        <div class="m-decision"><span class="m-dec-lbl">Prosecutor Decision Window</span><span class="m-timer">7:42 remaining</span></div>
+        <div class="m-decision"><span class="m-dec-lbl">Prosecutor Decision Window</span><span style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.55);">Intake screening complete - No Action recommended. Officer notified.</span></div>
         <div class="m-stats">
           <div class="m-stat"><div class="m-stat-v">DUI</div><div class="m-stat-l">Charge Type</div></div>
           <div class="m-stat"><div class="m-stat-v" style="color:#28C840;font-size:18px;">Approve</div><div class="m-stat-l">Recommended</div></div>
@@ -1989,7 +1992,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
       <div class="sec-label">What We Measure</div>
       <h2>Outcomes that matter to the system - and the people in it.</h2>
     </div>
-    <p style="font-size:16px;color:rgba(255,255,255,.6);line-height:1.7;">Our current Texas jurisdiction pilot runs April through July 2026. Every metric below is tracked against a 10-year historical baseline, with statistical testing designed to produce grant-defensible, peer-reviewable results.</p>
+    <p style="font-size:16px;color:rgba(255,255,255,.6);line-height:1.7;">Our current Texas jurisdiction <a href="#about-pilot" class="inline-link">pilot</a> runs April through July 2026. Every metric below is tracked against a 10-year historical baseline, with statistical testing designed to produce grant-defensible, peer-reviewable results.</p>
   </div>
   <div class="impact-grid au">
     <div class="impact-card"><svg class="impact-icon" aria-hidden="true" viewBox="0 0 32 32" fill="none"><path d="M16 3L29 9v7c0 8-5.5 13-13 15C4.5 29 3 24 3 16V9L16 3z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M11 16l3.5 3.5L21 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="impact-title">Jail Days Avoided</div><div class="impact-body">Every unnecessary booking <em>Intake</em> prevents is a jail bed day saved - tracked in real time and tallied monthly against the county&#39;s 10-year baseline. Converted to dollar value for taxpayer reporting.</div><span class="impact-pill">Public Benefit</span></div>
@@ -2166,8 +2169,8 @@ h1            { animation: fadeUp .6s .08s ease both; }
       <div class="sec-label">Our Research Partner</div>
       <h2 style="font-size:clamp(28px,3vw,40px);margin-bottom:22px;">The Center for Science and Law (SciLaw)</h2>
       <p class="intro-p">SciLaw is an independent 501(c)3 justice-tech nonprofit based in Houston, Texas. Where Justice Innovations builds and deploys the software, SciLaw provides the academic foundation - research in neurolaw, human decision-making, ethical data science, and criminal justice outcomes that informs every design decision we make.</p>
-      <p class="intro-p">The two organizations share leadership and a mission: to understand the science of how humans make decisions under pressure, and to build systems that make those decisions more accurate, more equitable, and more defensible in court.</p>
-      <p class="intro-p">SciLaw&#39;s research is published openly. Our current Texas jurisdiction pilot evaluation is designed to produce peer-reviewable data - not internal marketing metrics. When the results come in, they will be available to the field.</p>
+      <p class="intro-p">The two organizations share leadership and a mission: to understand the science of how humans make decisions under pressure, and to build systems that make those decisions more accurate, more consistent, and more defensible in court.</p>
+      <p class="intro-p">SciLaw&#39;s research is published openly. Our current Texas jurisdiction <a href="#about-pilot" class="inline-link">pilot evaluation</a> is designed to produce peer-reviewable data - not internal marketing metrics. When the results come in, they will be available to the field.</p>
     </div>
     <div>
       <div style="background:#112540;border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:36px;">
@@ -2176,7 +2179,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
           <li>Neurolaw - the neuroscience of human decision-making in legal contexts</li>
           <li>Ethical data science in criminal justice applications</li>
           <li>Pretrial population analysis and pretrial reform evaluation</li>
-          <li>accountability frameworks for prosecutorial decision-making</li>
+          <li>Accountability frameworks for prosecutorial decision-making</li>
           <li>Policy analysis for reoffender reduction and public safety outcomes</li>
           <li>Behavioral research on officer and prosecutor decision patterns</li>
         </ul>
@@ -2382,7 +2385,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
       <div class="phase-num">I</div>
       <div class="phase-label">Phase I - Foundation</div>
       <div class="phase-title">Agreements, Access &amp; Setup</div>
-      <div class="phase-body">Agreements and records requests executed. IT contact established with tech portfolio, integration requirements, and preferences documented. Weekly progress reporting cadence set. 24-hour <em>Intake</em> &amp; Screening Facility procedures and logistics documented. 10-year historical baseline analysis period defined for pilot evaluation.</div>
+      <div class="phase-body">Agreements and records requests executed. IT contact established with tech portfolio, integration requirements, and preferences documented. Weekly progress reporting cadence set. 24-hour <em>Intake</em> &amp; Screening Facility procedures and logistics documented. 10-year historical baseline analysis period defined for <a href="#about-pilot" class="inline-link">pilot evaluation</a>.</div>
     </div>
     <div class="phase-connector" aria-hidden="true"></div>
     <div class="phase-step">
