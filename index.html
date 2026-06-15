@@ -922,12 +922,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
 .phase-title { font-size: 18px; font-weight: 500; color: #fff; margin-bottom: 10px; }
 .phase-body { font-size: 15px; color: rgba(255,255,255,.5); line-height: 1.65; }
 .phase-connector { flex-shrink: 0; width: 58px; height: 2px; background: linear-gradient(90deg, var(--electric), rgba(27,111,232,.25)); margin-top: 33px; }
-@media (max-width: 768px) {
-  .phase-flow { flex-direction: column; gap: 32px; }
-  .phase-step { text-align: left; align-items: flex-start; flex-direction: row; gap: 20px; padding: 0; }
-  .phase-num { flex-shrink: 0; }
-  .phase-connector { width: 2px; height: 32px; margin-top: 0; margin-left: 33px; background: linear-gradient(180deg, var(--electric), rgba(27,111,232,.25)); }
-}
+
 .inline-link { color: var(--electric-lt); text-underline-offset: 3px; }
 .inline-link:hover { color: #fff; }
 
@@ -1244,6 +1239,12 @@ h1            { animation: fadeUp .6s .08s ease both; }
   .section { padding: var(--py) var(--px); }
 
   h2 { font-size: clamp(26px, 7vw, 40px); }
+
+  /* phase flow */
+  .phase-flow { flex-direction: column; gap: 32px; }
+  .phase-step { text-align: left; align-items: flex-start; flex-direction: row; gap: 20px; padding: 0; }
+  .phase-num { flex-shrink: 0; }
+  .phase-connector { width: 2px; height: 32px; margin-top: 0; margin-left: 33px; background: linear-gradient(180deg, var(--electric), rgba(27,111,232,.25)); }
 }
 
 /* ── TINY PHONES < 480px ── */
