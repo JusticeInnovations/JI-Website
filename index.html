@@ -192,6 +192,7 @@ h2 {
 .g-foot { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; }
 .g-pub-hdr { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: end; }
 .g-papers  { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.g-papers-sf { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
 .g-paper-1 { display: grid; grid-template-columns: 1fr; gap: 16px; }
 .g-wp      { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: start; }
 
@@ -1198,7 +1199,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
 
   /* all multi-col grids collapse to single column */
   .g2, .g3, .g4,
-  .g-foot, .g-pub-hdr, .g-papers, .g-wp,
+  .g-foot, .g-pub-hdr, .g-papers, .g-papers-sf, .g-wp,
   .role-grid, .feature-grid, .impact-grid,
   .stat-banner, .sol-cards {
     grid-template-columns: 1fr;
@@ -2089,7 +2090,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
 
   <div style="margin-top:48px;">
     <div id="sf-heading" style="font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-lt);margin-bottom:20px;display:flex;align-items:center;gap:10px;"><span style="width:22px;height:1px;background:var(--teal-lt);display:inline-block;"></span>Scientific Foundation - Decision-Making, Risk &amp; Impartiality</div>
-    <div class="g-papers au">
+    <div class="g-papers-sf au">
       <a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2019.02926/abstract" target="_blank" rel="noopener" class="paper">
         <div class="p-type">Peer-Reviewed Study</div>
         <div class="p-title">Assessing Risk Among Correctional Community Probation Populations: Predicting Reoffense with Mobile Neurocognitive Assessment Software</div>
@@ -2108,7 +2109,6 @@ h1            { animation: fadeUp .6s .08s ease both; }
         <div class="p-authors">Ormachea, Lovins, Eagleman, Davenport, Jarman &amp; Haarsma &middot; Center for Science and Law</div>
         <div class="p-foot"><span class="p-journal">Criminal Justice and Behavior &middot; SAGE Journals &middot; 2017</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><img class="p-journal-logo" src="" alt="" style="height:24px;width:auto;display:block;margin-top:8px;"></div>
       </a>
-      <button id="sf-toggle" class="btn btn--outline" style="margin:24px auto;display:block;" onclick="var m=document.getElementById('sf-more');var b=document.getElementById('sf-toggle');if(m.style.display==='none'){m.style.display='';b.textContent='Show Less';}else{m.style.display='none';b.textContent='Show More';document.getElementById('sf-heading').scrollIntoView({behavior:'smooth'});}">Show More</button>
       <div id="sf-more" style="display:none;">
       <a href="https://journals.sagepub.com/doi/abs/10.1177/0011128717748576" target="_blank" rel="noopener" class="paper">
         <div class="p-type">Peer-Reviewed Study</div>
@@ -2166,6 +2166,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
       </a>
       </div>
     </div>
+    <button id="sf-toggle" onclick="var m=document.getElementById('sf-more');var b=document.getElementById('sf-toggle');if(m.style.display==='none'){m.style.display='';b.innerHTML='Show Less <svg width=\'12\' height=\'12\' viewBox=\'0 0 12 12\' fill=\'none\'><path d=\'M6 10V2M2 6l4-4 4 4\' stroke=\'currentColor\' stroke-width=\'1.4\' stroke-linecap=\'round\' stroke-linejoin=\'round\'/></svg>';}else{m.style.display='none';b.innerHTML='Show More <svg width=\'12\' height=\'12\' viewBox=\'0 0 12 12\' fill=\'none\'><path d=\'M6 2v8M2 6l4 4 4-4\' stroke=\'currentColor\' stroke-width=\'1.4\' stroke-linecap=\'round\' stroke-linejoin=\'round\'/></svg>';document.getElementById('sf-heading').scrollIntoView({behavior:'smooth'});}" style="display:flex;align-items:center;gap:8px;margin:32px auto 0;padding:12px 28px;background:transparent;border:1px solid rgba(255,255,255,.2);border-radius:4px;color:var(--gold-lt);font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;">Show More <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
   </div>
 
   <!-- WHITE PAPER -->
