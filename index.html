@@ -2088,80 +2088,83 @@ h1            { animation: fadeUp .6s .08s ease both; }
   </div>
 
   <div style="margin-top:48px;">
-    <div style="font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-lt);margin-bottom:20px;display:flex;align-items:center;gap:10px;"><span style="width:22px;height:1px;background:var(--teal-lt);display:inline-block;"></span>Scientific Foundation - Decision-Making, Risk &amp; Impartiality</div>
+    <div id="sf-heading" style="font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-lt);margin-bottom:20px;display:flex;align-items:center;gap:10px;"><span style="width:22px;height:1px;background:var(--teal-lt);display:inline-block;"></span>Scientific Foundation - Decision-Making, Risk &amp; Impartiality</div>
     <div class="g-papers au">
       <a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2019.02926/abstract" target="_blank" rel="noopener" class="paper">
         <div class="p-type">Peer-Reviewed Study</div>
         <div class="p-title">Assessing Risk Among Correctional Community Probation Populations: Predicting Reoffense with Mobile Neurocognitive Assessment Software</div>
         <div class="p-authors">Haarsma, Davenport et al. &middot; Center for Science and Law</div>
-        <div class="p-foot"><span class="p-journal">Frontiers in Psychology &middot; 2020</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="p-foot"><span class="p-journal">Frontiers in Psychology &middot; 2020</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><img class="p-journal-logo" src="" alt="" style="height:24px;width:auto;display:block;margin-top:8px;"></div>
       </a>
       <a href="https://journalofethics.ama-assn.org/2016/03/stas1-1603.html" target="_blank" rel="noopener" class="paper">
         <div class="p-type">Peer-Reviewed Study</div>
         <div class="p-title">Enabling Individualized Criminal Sentencing While Reducing Subjectivity: A Tablet-Based Assessment of Recidivism Risk</div>
         <div class="p-authors">Ormachea, Davenport, Haarsma, Jarman, Henderson &amp; Eagleman &middot; Center for Science and Law</div>
-        <div class="p-foot"><span class="p-journal">AMA Journal of Ethics &middot; 2016</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="p-foot"><span class="p-journal">AMA Journal of Ethics &middot; 2016</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><img class="p-journal-logo" src="" alt="" style="height:24px;width:auto;display:block;margin-top:8px;"></div>
       </a>
       <a href="https://journals.sagepub.com/doi/abs/10.1177/0093854817714018" target="_blank" rel="noopener" class="paper">
         <div class="p-type">Peer-Reviewed Study</div>
         <div class="p-title">The Role of Tablet-Based Psychological Tasks in Risk Assessment</div>
         <div class="p-authors">Ormachea, Lovins, Eagleman, Davenport, Jarman &amp; Haarsma &middot; Center for Science and Law</div>
-        <div class="p-foot"><span class="p-journal">Criminal Justice and Behavior &middot; SAGE Journals &middot; 2017</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="p-foot"><span class="p-journal">Criminal Justice and Behavior &middot; SAGE Journals &middot; 2017</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><img class="p-journal-logo" src="" alt="" style="height:24px;width:auto;display:block;margin-top:8px;"></div>
       </a>
+      <button id="sf-toggle" class="btn btn--outline" style="margin:24px auto;display:block;" onclick="var m=document.getElementById('sf-more');var b=document.getElementById('sf-toggle');if(m.style.display==='none'){m.style.display='';b.textContent='Show Less';}else{m.style.display='none';b.textContent='Show More';document.getElementById('sf-heading').scrollIntoView({behavior:'smooth'});}">Show More</button>
+      <div id="sf-more" style="display:none;">
       <a href="https://journals.sagepub.com/doi/abs/10.1177/0011128717748576" target="_blank" rel="noopener" class="paper">
         <div class="p-type">Peer-Reviewed Study</div>
         <div class="p-title">Gendered Outcomes in Prostitution Arrests in Houston, Texas</div>
         <div class="p-authors">Pfeffer, Ormachea &amp; Eagleman &middot; Center for Science and Law</div>
-        <div class="p-foot"><span class="p-journal">Crime &amp; Delinquency &middot; SAGE Journals &middot; 2017</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="p-foot"><span class="p-journal">Crime &amp; Delinquency &middot; SAGE Journals &middot; 2017</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><img class="p-journal-logo" src="" alt="" style="height:24px;width:auto;display:block;margin-top:8px;"></div>
       </a>
       <a href="https://www.jscilaw.org/index.php/jscilaw/article/view/22" target="_blank" rel="noopener" class="paper">
         <div class="p-type">Peer-Reviewed Study</div>
         <div class="p-title">The Role of Neuroscience in Drug Policy: Promises and Prospects</div>
         <div class="p-authors">Ormachea, Savjani, DeLaGarza &amp; Eagleman &middot; Center for Science and Law</div>
-        <div class="p-foot"><span class="p-journal">Journal of Science and Law &middot; 2016</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="p-foot"><span class="p-journal">Journal of Science and Law &middot; 2016</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><img class="p-journal-logo" src="" alt="" style="height:24px;width:auto;display:block;margin-top:8px;"></div>
       </a>
       <a href="https://www.eaglemanlab.net/papers/BumannEagleman_Blameworthiness.pdf" target="_blank" rel="noopener" class="paper">
         <div class="p-type">Law Review</div>
         <div class="p-title">Intuitions of Blameworthiness as a Heuristic That Evaluates the Probability of the Offender Committing Future Antisocial Acts</div>
         <div class="p-authors">Bumann &amp; Eagleman &middot; Center for Science and Law</div>
-        <div class="p-foot"><span class="p-journal">Thurgood Marshall Law Review &middot; 2012</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="p-foot"><span class="p-journal">Thurgood Marshall Law Review &middot; 2012</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><img class="p-journal-logo" src="" alt="" style="height:24px;width:auto;display:block;margin-top:8px;"></div>
       </a>
       <a href="https://www.neulaw.org/images/neurocompatibility_index.pdf" target="_blank" rel="noopener" class="paper">
         <div class="p-type">Academic Chapter</div>
         <div class="p-title">Defining a Neurocompatibility Index for Systems of Law</div>
         <div class="p-authors">Center for Science and Law</div>
-        <div class="p-foot"><span class="p-journal">Law of the Future &middot; Hague Institute for the Internationalisation of Law</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="p-foot"><span class="p-journal">Law of the Future &middot; Hague Institute for the Internationalisation of Law</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><img class="p-journal-logo" src="" alt="" style="height:24px;width:auto;display:block;margin-top:8px;"></div>
       </a>
       <a href="https://journals.lww.com/neurotodayonline/Fulltext/2012/04190/Legal_Ease__Is_Neuroimaging_a_Valid_Biomarker_in.13.aspx" target="_blank" rel="noopener" class="paper">
         <div class="p-type">Academic Journal</div>
         <div class="p-title">Legal-Ease: Is Neuroimaging a Valid Biomarker in Legal Cases?</div>
         <div class="p-authors">Valeo &middot; Center for Science and Law</div>
-        <div class="p-foot"><span class="p-journal">Neurology Today &middot; 2012</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="p-foot"><span class="p-journal">Neurology Today &middot; 2012</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><img class="p-journal-logo" src="" alt="" style="height:24px;width:auto;display:block;margin-top:8px;"></div>
       </a>
       <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1375495" target="_blank" rel="noopener" class="paper">
         <div class="p-type">Peer-Reviewed Study</div>
         <div class="p-title">Why Neuroscience Matters for a Rational Drug Policy</div>
         <div class="p-authors">Eagleman, Correro &amp; Singh &middot; Center for Science and Law</div>
-        <div class="p-foot"><span class="p-journal">Minnesota Journal of Law, Science and Technology &middot; 2010</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="p-foot"><span class="p-journal">Minnesota Journal of Law, Science and Technology &middot; 2010</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><img class="p-journal-logo" src="" alt="" style="height:24px;width:auto;display:block;margin-top:8px;"></div>
       </a>
       <a href="https://www.thehoustonlawyer.com/aa_mar08/page36.htm" target="_blank" rel="noopener" class="paper">
         <div class="p-type">Academic Article</div>
         <div class="p-title">Neuroscience and the Law</div>
         <div class="p-authors">Eagleman &middot; Center for Science and Law</div>
-        <div class="p-foot"><span class="p-journal">Houston Lawyer &middot; 2008</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="p-foot"><span class="p-journal">Houston Lawyer &middot; 2008</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><img class="p-journal-logo" src="" alt="" style="height:24px;width:auto;display:block;margin-top:8px;"></div>
       </a>
       <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0179352" target="_blank" rel="noopener" class="paper">
         <div class="p-type">Peer-Reviewed Study</div>
         <div class="p-title">Diagnostic Accuracy of Tablet-Based Software for the Detection of Concussion</div>
         <div class="p-authors">Yang, Davenport, Ormachea, Eagleman et al. &middot; Center for Science and Law</div>
-        <div class="p-foot"><span class="p-journal">PLOS ONE &middot; 2017</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="p-foot"><span class="p-journal">PLOS ONE &middot; 2017</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><img class="p-journal-logo" src="" alt="" style="height:24px;width:auto;display:block;margin-top:8px;"></div>
       </a>
       <a href="https://pubmed.ncbi.nlm.nih.gov/36595436/" target="_blank" rel="noopener" class="paper">
         <div class="p-type">Peer-Reviewed Study</div>
         <div class="p-title">Psychopathy and Substance Use Predict Recidivism in Women: A 7-Year Prospective Study</div>
         <div class="p-authors">Edwards, Gullapalli, Maurer, Davenport &amp; Kiehl et al. &middot; Center for Science and Law</div>
-        <div class="p-foot"><span class="p-journal">Personality Disorders: Theory, Research, and Treatment &middot; 2023</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="p-foot"><span class="p-journal">Personality Disorders: Theory, Research, and Treatment &middot; 2023</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><img class="p-journal-logo" src="" alt="" style="height:24px;width:auto;display:block;margin-top:8px;"></div>
       </a>
+      </div>
     </div>
   </div>
 
