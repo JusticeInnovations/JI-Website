@@ -1403,17 +1403,22 @@ h1            { animation: fadeUp .6s .08s ease both; }
 }
 
 /* ─── TEAM ─────────────────────────────────────────────────────────── */
-.team-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
-@media (max-width:900px) { .team-grid { grid-template-columns:repeat(2,1fr); } }
-@media (max-width:600px) { .team-grid { grid-template-columns:1fr; } }
+.team-row-1 { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.team-row-2 { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; max-width:calc(66.666% - 8px); margin:24px auto 0; }
+@media (max-width:900px) {
+  .team-row-1 { grid-template-columns:repeat(2,1fr); }
+  .team-row-2 { max-width:100%; margin-top:24px; }
+}
+@media (max-width:600px) {
+  .team-row-1, .team-row-2 { grid-template-columns:1fr; }
+}
 .team-card { background:#112540; border:1px solid rgba(255,255,255,.08); border-radius:10px; overflow:hidden; display:flex; flex-direction:column; }
 .team-photo-wrap { width:100%; aspect-ratio:1/1; overflow:hidden; background:#0D1F35; }
 .team-photo { width:100%; height:100%; object-fit:cover; display:block; }
-.team-card-body { padding:24px; display:flex; flex-direction:column; flex:1; gap:8px; }
-.team-name { font-family: 'Cormorant Garamond', serif; font-size:20px; font-weight:600; color:#fff; }
-.team-title { font-family: 'DM Mono', monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:8px; }
-.team-bio { font-size:13px; color:rgba(255,255,255,.6); line-height:1.65; flex:1; }
-.team-li { margin-top:16px; font-size:12px; padding:8px 16px; align-self:flex-start; }
+.team-card-body { padding:24px; display:flex; flex-direction:column; flex:1; }
+.team-name { font-family: 'Cormorant Garamond', serif; font-size:20px; font-weight:700; color:#fff; margin-bottom:6px; }
+.team-title { font-family: 'DM Mono', monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:20px; }
+.team-li { display:inline-flex; align-items:center; gap:7px; font-size:12px; padding:8px 16px; align-self:flex-start; margin-top:auto; }
 </style>
 </head>
 <body>
@@ -2052,15 +2057,18 @@ h1            { animation: fadeUp .6s .08s ease both; }
 <div class="inner">
   <div class="sec-label">Our Team</div>
   <h2 style="max-width:700px;margin-bottom:40px;">The people behind the platform.</h2>
-  <div class="team-grid">
+
+  <div class="team-row-1">
 
     <div class="team-card">
       <div class="team-photo-wrap"><img src="team/sasha.jpg" alt="Sasha Davenport" class="team-photo"></div>
       <div class="team-card-body">
         <div class="team-name">Sasha Davenport, PhD</div>
         <div class="team-title">Co-founder, CEO</div>
-        <p class="team-bio">Sasha is a behavioral scientist who spent years working inside prosecutor offices studying how charging decisions are made. She co-founded Justice Innovations to build technology that supports pre-arrest prosecutorial screening at scale.</p>
-        <a href="https://www.linkedin.com/in/sashadavenportphd/" target="_blank" rel="noopener" class="btn btn-line team-li">LinkedIn <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H7M13 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="https://www.linkedin.com/in/sashadavenportphd/" target="_blank" rel="noopener" class="btn btn-line team-li">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
       </div>
     </div>
 
@@ -2069,8 +2077,10 @@ h1            { animation: fadeUp .6s .08s ease both; }
       <div class="team-card-body">
         <div class="team-name">John Brewer</div>
         <div class="team-title">Assistant District Attorney</div>
-        <p class="team-bio">John brings decades of frontline prosecutorial experience to the Justice Innovations advisory team. He has spent his career in Texas courtrooms and understands firsthand what prosecutors need at the moment of a charging decision.</p>
-        <a href="https://www.linkedin.com/company/justiceinnovations/" target="_blank" rel="noopener" class="btn btn-line team-li">LinkedIn <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H7M13 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="https://www.linkedin.com/company/justiceinnovations/" target="_blank" rel="noopener" class="btn btn-line team-li">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
       </div>
     </div>
 
@@ -2079,18 +2089,26 @@ h1            { animation: fadeUp .6s .08s ease both; }
       <div class="team-card-body">
         <div class="team-name">Steve Baldassano</div>
         <div class="team-title">Assistant District Attorney (ret.)</div>
-        <p class="team-bio">Steve served as an Assistant District Attorney in Texas for over two decades, building deep institutional knowledge across thousands of charging decisions. He advises Justice Innovations on prosecutorial workflow and platform design.</p>
-        <a href="https://www.linkedin.com/company/justiceinnovations/" target="_blank" rel="noopener" class="btn btn-line team-li">LinkedIn <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H7M13 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="https://www.linkedin.com/company/justiceinnovations/" target="_blank" rel="noopener" class="btn btn-line team-li">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
       </div>
     </div>
+
+  </div>
+
+  <div class="team-row-2">
 
     <div class="team-card">
       <div class="team-photo-wrap"><img src="team/david.jpg" alt="David Eagleman" class="team-photo"></div>
       <div class="team-card-body">
         <div class="team-name">David Eagleman, PhD</div>
         <div class="team-title">Chief Science Officer</div>
-        <p class="team-bio">David is a neuroscientist, Stanford professor, and bestselling author whose research on decision-making underlies the scientific framework of the Intake platform. He directs the Center for Science and Law and leads JI's research methodology.</p>
-        <a href="https://www.linkedin.com/in/davideagleman/" target="_blank" rel="noopener" class="btn btn-line team-li">LinkedIn <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H7M13 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="https://www.linkedin.com/in/davideagleman/" target="_blank" rel="noopener" class="btn btn-line team-li">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
       </div>
     </div>
 
@@ -2099,12 +2117,15 @@ h1            { animation: fadeUp .6s .08s ease both; }
       <div class="team-card-body">
         <div class="team-name">Kim Baley</div>
         <div class="team-title">Chief Operating Officer</div>
-        <p class="team-bio">Kim oversees operations, partnerships, and strategic execution across Justice Innovations and its affiliated entities. She brings a systems-level perspective to building the infrastructure that supports a first-of-its-kind criminal justice platform.</p>
-        <a href="https://www.linkedin.com/in/kim-baley77498/" target="_blank" rel="noopener" class="btn btn-line team-li">LinkedIn <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H7M13 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="https://www.linkedin.com/in/kim-baley77498/" target="_blank" rel="noopener" class="btn btn-line team-li">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
       </div>
     </div>
 
   </div>
+
 </div>
 </section>
 
