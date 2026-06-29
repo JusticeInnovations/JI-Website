@@ -1401,6 +1401,19 @@ h1            { animation: fadeUp .6s .08s ease both; }
   .police-lights { display: none; }
   .au { opacity: 1 !important; transform: none !important; }
 }
+
+/* ─── TEAM ─────────────────────────────────────────────────────────── */
+.team-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+@media (max-width:900px) { .team-grid { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:600px) { .team-grid { grid-template-columns:1fr; } }
+.team-card { background:#112540; border:1px solid rgba(255,255,255,.08); border-radius:10px; overflow:hidden; display:flex; flex-direction:column; }
+.team-photo-wrap { width:100%; aspect-ratio:1/1; overflow:hidden; background:#0D1F35; }
+.team-photo { width:100%; height:100%; object-fit:cover; display:block; }
+.team-card-body { padding:24px; display:flex; flex-direction:column; flex:1; gap:8px; }
+.team-name { font-family: 'Cormorant Garamond', serif; font-size:20px; font-weight:600; color:#fff; }
+.team-title { font-family: 'DM Mono', monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:8px; }
+.team-bio { font-size:13px; color:rgba(255,255,255,.6); line-height:1.65; flex:1; }
+.team-li { margin-top:16px; font-size:12px; padding:8px 16px; align-self:flex-start; }
 </style>
 </head>
 <body>
@@ -1454,6 +1467,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
         <a href="#about">Who We Are</a>
         <a href="#about-scilaw">SciLaw Partnership</a>
         <a href="#about-pilot">Current Texas Jurisdiction Pilot</a>
+        <a href="#team">Team</a>
         <div class="subnav-div"></div>
         <a href="#cta">Contact Us</a>
       </div>
@@ -2032,6 +2046,68 @@ h1            { animation: fadeUp .6s .08s ease both; }
 </div>
 </section>
 
+<!-- TEAM -->
+<div class="section-divider"></div>
+<section id="team" class="section section--dark">
+<div class="inner">
+  <div class="sec-label">Our Team</div>
+  <h2 style="max-width:700px;margin-bottom:40px;">The people behind the platform.</h2>
+  <div class="team-grid">
+
+    <div class="team-card">
+      <div class="team-photo-wrap"><img src="team/sasha.jpg" alt="Sasha Davenport" class="team-photo"></div>
+      <div class="team-card-body">
+        <div class="team-name">Sasha Davenport, PhD</div>
+        <div class="team-title">Co-founder, CEO</div>
+        <p class="team-bio">Sasha is a behavioral scientist who spent years working inside prosecutor offices studying how charging decisions are made. She co-founded Justice Innovations to build technology that supports pre-arrest prosecutorial screening at scale.</p>
+        <a href="https://www.linkedin.com/in/sashadavenportphd/" target="_blank" rel="noopener" class="btn btn-line team-li">LinkedIn <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H7M13 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-photo-wrap"><img src="team/john.jpg" alt="John Brewer" class="team-photo"></div>
+      <div class="team-card-body">
+        <div class="team-name">John Brewer</div>
+        <div class="team-title">Assistant District Attorney</div>
+        <p class="team-bio">John brings decades of frontline prosecutorial experience to the Justice Innovations advisory team. He has spent his career in Texas courtrooms and understands firsthand what prosecutors need at the moment of a charging decision.</p>
+        <a href="https://www.linkedin.com/company/justiceinnovations/" target="_blank" rel="noopener" class="btn btn-line team-li">LinkedIn <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H7M13 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-photo-wrap"><img src="team/steve.jpg" alt="Steve Baldassano" class="team-photo"></div>
+      <div class="team-card-body">
+        <div class="team-name">Steve Baldassano</div>
+        <div class="team-title">Assistant District Attorney (ret.)</div>
+        <p class="team-bio">Steve served as an Assistant District Attorney in Texas for over two decades, building deep institutional knowledge across thousands of charging decisions. He advises Justice Innovations on prosecutorial workflow and platform design.</p>
+        <a href="https://www.linkedin.com/company/justiceinnovations/" target="_blank" rel="noopener" class="btn btn-line team-li">LinkedIn <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H7M13 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-photo-wrap"><img src="team/david.jpg" alt="David Eagleman" class="team-photo"></div>
+      <div class="team-card-body">
+        <div class="team-name">David Eagleman, PhD</div>
+        <div class="team-title">Chief Science Officer</div>
+        <p class="team-bio">David is a neuroscientist, Stanford professor, and bestselling author whose research on decision-making underlies the scientific framework of the Intake platform. He directs the Center for Science and Law and leads JI's research methodology.</p>
+        <a href="https://www.linkedin.com/in/davideagleman/" target="_blank" rel="noopener" class="btn btn-line team-li">LinkedIn <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H7M13 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-photo-wrap"><img src="team/kim.jpg" alt="Kim Baley" class="team-photo"></div>
+      <div class="team-card-body">
+        <div class="team-name">Kim Baley</div>
+        <div class="team-title">Chief Operating Officer</div>
+        <p class="team-bio">Kim oversees operations, partnerships, and strategic execution across Justice Innovations and its affiliated entities. She brings a systems-level perspective to building the infrastructure that supports a first-of-its-kind criminal justice platform.</p>
+        <a href="https://www.linkedin.com/in/kim-baley77498/" target="_blank" rel="noopener" class="btn btn-line team-li">LinkedIn <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H7M13 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
 <!-- CURRENT TEXAS JURISDICTION PILOT -->
 <div class="section-divider"></div>
 <!-- RESEARCH -->
@@ -2186,24 +2262,11 @@ h1            { animation: fadeUp .6s .08s ease both; }
     <button id="sf-collapse" onclick="var ids=['sf-card-4','sf-card-5','sf-card-6','sf-card-7','sf-card-8','sf-card-9','sf-card-10','sf-card-11','sf-card-12'];ids.forEach(function(id){document.getElementById(id).classList.add('sf-hidden');});document.getElementById('sf-collapse').style.display='none';document.getElementById('sf-toggle').style.display='flex';document.getElementById('sf-heading').scrollIntoView({behavior:'smooth'});" style="display:none;align-items:center;gap:8px;margin:32px auto 0;padding:12px 28px;background:transparent;border:1px solid rgba(255,255,255,.2);border-radius:4px;color:var(--gold-lt);font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;">Show Less <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 10V2M2 6l4-4 4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
   </div>
 
-  <!-- WHITE PAPER -->
-  <div style="margin-top:48px;">
-    <div style="font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:20px;display:flex;align-items:center;gap:10px;"><span style="width:22px;height:1px;background:rgba(255,255,255,.3);display:inline-block;"></span>Technical Documentation - Justice Innovations</div>
-    <div id="white-paper" style="background:#112540;border:1px solid rgba(255,255,255,.08);border-left:3px solid var(--gold);border-radius:8px;padding:36px;margin-bottom:16px;">
-      <div class="g-wp">
-        <div>
-          <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">White Paper</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500;color:#fff;line-height:1.35;margin-bottom:10px;">Justice Innovations <em>Intake</em> Platform: Security &amp; Compliance White Paper</div>
-          <div style="font-size:14px;color:rgba(255,255,255,.55);margin-bottom:20px;">Justice Innovations Technical Team &middot; 2025</div>
-          <p style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.7;margin-bottom:20px;">The <em>Intake</em> Platform is engineered for prosecutors, law enforcement, clerks, and jail staff operating in CJIS- and FedRAMP-governed environments. This white paper details the platform&rsquo;s technical, operational, and governance controls - covering zero-trust architecture, AES-256 encryption, immutable audit logs, AWS GovCloud hosting, role-based access control, and full alignment to CJIS Security Policy Sections 5.4&ndash;5.13 and FedRAMP-Ready Infrastructure baselines.</p>
-          <a href="JI-Security-Compliance-White-Paper.pdf" target="_blank" rel="noopener" class="btn btn-line">Download White Paper <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 3v8M5 8l3 3 3-3M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        </div>
-        <div style="flex-shrink:0;width:96px;height:96px;border-radius:10px;background:rgba(212,134,10,.08);border:1px solid rgba(212,134,10,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 3L25 7v7c0 7-5 11-11 13C8 25 3 21 3 14V7L14 3z" stroke="#D4860A" stroke-width="1.4" stroke-linejoin="round"/><path d="M10 14l2.5 2.5L18 10" stroke="#D4860A" stroke-width="1.4" stroke-linecap="round"/></svg>
-          <div style="font-family:'DM Mono',monospace;font-size:8px;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;text-align:center;line-height:1.4;">Security<br>&amp; Compliance</div>
-        </div>
-      </div>
-    </div>
+  <div style="margin-top:48px;" id="white-paper">
+<div class="sec-label">Security and Compliance</div>
+<h2 style="max-width:700px;margin-bottom:24px;">CJIS Compliant by Design</h2>
+<p style="font-size:16px;color:rgba(255,255,255,.7);max-width:700px;line-height:1.7;">The Intake platform is engineered to meet Criminal Justice Information Services (CJIS) Security Policy requirements. Every component from data transmission to access control is built to operate within CJIS- and FedRAMP-governed environments. Full compliance documentation is available upon request.</p>
+</div>
     <div class="g-paper-1 au">
       <a href="#cta" class="paper">
         <div class="p-type">Methodology</div>
@@ -2212,7 +2275,6 @@ h1            { animation: fadeUp .6s .08s ease both; }
         <div class="p-foot"><span class="p-journal">Available on Request</span><svg class="p-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
     </div>
-  </div>
 </div>
 </section>
 
@@ -2329,6 +2391,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
         <li><a href="#about">About Us</a></li>
         <li><a href="#about-scilaw">SciLaw Partnership</a></li>
         <li><a href="#about-pilot">Current Texas Jurisdiction Pilot</a></li>
+        <li><a href="#team">Team</a></li>
         <li><button onclick="openLegalModal('privacy')">Privacy Policy</button></li>
         <li><button onclick="openLegalModal('terms')">Terms of Use</button></li>
         <li><button onclick="openLegalModal('accessibility')">Accessibility</button></li>
