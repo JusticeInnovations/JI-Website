@@ -1413,7 +1413,9 @@ h1            { animation: fadeUp .6s .08s ease both; }
   .team-row-1, .team-row-2 { grid-template-columns:1fr; }
 }
 .team-card { background:#112540; border:1px solid rgba(255,255,255,.08); border-radius:10px; overflow:hidden; display:flex; flex-direction:column; }
-.team-photo-wrap { width:100%; overflow:hidden; background:#0D1F35; }
+.team-photo-wrap { width:100%; overflow:hidden; background:#0D1F35; position:relative; }
+.team-bio-overlay { position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.75); color:#fff; padding:16px; font-size:13px; line-height:1.6; transform:translateY(100%); transition:transform 0.3s ease; }
+.team-card:hover .team-bio-overlay { transform:translateY(0); }
 .team-photo { width:100%; height:auto; object-fit:contain; display:block; max-height:220px; }
 .team-card-body { padding:24px; display:flex; flex-direction:row; align-items:center; justify-content:space-between; gap:16px; }
 .team-card-info { display:flex; flex-direction:column; }
@@ -2062,7 +2064,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
   <div class="team-row-1">
 
     <div class="team-card">
-      <div class="team-photo-wrap"><img src="team/sasha.jpg" alt="Sasha Davenport" class="team-photo"></div>
+      <div class="team-photo-wrap"><img src="team/sasha.jpg" alt="Sasha Davenport" class="team-photo"><div class="team-bio-overlay">Sasha is a behavioral scientist who spent years working inside prosecutor offices studying how charging decisions are made. She co-founded Justice Innovations to build technology that supports pre-arrest prosecutorial screening at scale.</div></div>
       <div class="team-card-body">
         <div class="team-card-info">
           <div class="team-name">Sasha Davenport, PhD</div>
@@ -2076,7 +2078,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
     </div>
 
     <div class="team-card">
-      <div class="team-photo-wrap"><img src="team/david.jpg" alt="David Eagleman" class="team-photo"></div>
+      <div class="team-photo-wrap"><img src="team/david.jpg" alt="David Eagleman" class="team-photo"><div class="team-bio-overlay">David is a neuroscientist, Stanford professor, and bestselling author whose research on decision-making underlies the scientific framework of the Intake platform. He directs the Center for Science and Law and leads JI's research methodology.</div></div>
       <div class="team-card-body">
         <div class="team-card-info">
           <div class="team-name">David Eagleman, PhD</div>
@@ -2090,7 +2092,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
     </div>
 
     <div class="team-card">
-      <div class="team-photo-wrap"><img src="team/john.jpg" alt="John Brewer" class="team-photo"></div>
+      <div class="team-photo-wrap"><img src="team/john.jpg" alt="John Brewer" class="team-photo"><div class="team-bio-overlay">John brings decades of frontline prosecutorial experience to the Justice Innovations advisory team. He has spent his career in Texas courtrooms and understands firsthand what prosecutors need at the moment of a charging decision.</div></div>
       <div class="team-card-body">
         <div class="team-card-info">
           <div class="team-name">John Brewer</div>
@@ -2108,7 +2110,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
   <div class="team-row-2">
 
     <div class="team-card">
-      <div class="team-photo-wrap"><img src="team/steve.jpg" alt="Steve Baldassano" class="team-photo"></div>
+      <div class="team-photo-wrap"><img src="team/steve.jpg" alt="Steve Baldassano" class="team-photo"><div class="team-bio-overlay">Steve served as an Assistant District Attorney in Texas for over two decades, building deep institutional knowledge across thousands of charging decisions. He advises Justice Innovations on prosecutorial workflow and platform design.</div></div>
       <div class="team-card-body">
         <div class="team-card-info">
           <div class="team-name">Steve Baldassano</div>
@@ -2122,7 +2124,7 @@ h1            { animation: fadeUp .6s .08s ease both; }
     </div>
 
     <div class="team-card">
-      <div class="team-photo-wrap"><img src="team/kim.jpg" alt="Kim Baley" class="team-photo"></div>
+      <div class="team-photo-wrap"><img src="team/kim.jpg" alt="Kim Baley" class="team-photo"><div class="team-bio-overlay">Kim oversees operations, partnerships, and strategic execution across Justice Innovations and its affiliated entities. She brings a systems-level perspective to building the infrastructure that supports a first-of-its-kind criminal justice platform.</div></div>
       <div class="team-card-body">
         <div class="team-card-info">
           <div class="team-name">Kim Baley</div>
